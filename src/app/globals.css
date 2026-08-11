@@ -1,54 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f6f2e7;
+  --paper: #ffffff;
   --paper-raised: #ffffff;
-  --paper-tint: #efe8d6;
-  --ink: #1e241c;
-  --ink-soft: #4e5a49;
-  --ink-faint: #7c8577;
-  --lawn: #2e5233;
-  --lawn-deep: #1f3a24;
-  --lawn-light: #6b8f71;
-  --maroon: #7c332e;
-  --gold: #a07c34;
-  --line: #dbd2b8;
-  --line-soft: #e8e1cc;
-  --focus: #1d5fbf;
+  --paper-tint: #e9f9ee;
+  --ink: #142318;
+  --ink-soft: #44604a;
+  --ink-faint: #74897a;
+  --lawn: #1e9e46;
+  --lawn-deep: #147a35;
+  --lawn-light: #6fe39a;
+  --maroon: #d93a3a;
+  --gold: #e8a400;
+  --sky: #1d6fe0;
+  --line: #cdeed8;
+  --line-soft: #e2f7e9;
+  --focus: #1d6fe0;
 }
 
 :root[data-theme="dark"] {
-  --paper: #14180f;
-  --paper-raised: #1b2117;
-  --paper-tint: #1f261a;
-  --ink: #ede8d8;
-  --ink-soft: #b7bea9;
-  --ink-faint: #818c74;
-  --lawn: #7fae83;
-  --lawn-deep: #9bc49e;
-  --lawn-light: #7fae83;
-  --maroon: #d89490;
-  --gold: #d8b876;
-  --line: #323b29;
-  --line-soft: #262e20;
+  --paper: #0d1712;
+  --paper-raised: #15221a;
+  --paper-tint: #1a2b20;
+  --ink: #eaf6ec;
+  --ink-soft: #afc9b5;
+  --ink-faint: #7c9483;
+  --lawn: #4ade80;
+  --lawn-deep: #34c266;
+  --lawn-light: #86efac;
+  --maroon: #ff6b6b;
+  --gold: #ffd166;
+  --sky: #5b9fff;
+  --line: #274031;
+  --line-soft: #1e3327;
   --focus: #7fb0ff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #14180f;
-    --paper-raised: #1b2117;
-    --paper-tint: #1f261a;
-    --ink: #ede8d8;
-    --ink-soft: #b7bea9;
-    --ink-faint: #818c74;
-    --lawn: #7fae83;
-    --lawn-deep: #9bc49e;
-    --lawn-light: #7fae83;
-    --maroon: #d89490;
-    --gold: #d8b876;
-    --line: #323b29;
-    --line-soft: #262e20;
+    --paper: #0d1712;
+    --paper-raised: #15221a;
+    --paper-tint: #1a2b20;
+    --ink: #eaf6ec;
+    --ink-soft: #afc9b5;
+    --ink-faint: #7c9483;
+    --lawn: #4ade80;
+    --lawn-deep: #34c266;
+    --lawn-light: #86efac;
+    --maroon: #ff6b6b;
+    --gold: #ffd166;
+    --sky: #5b9fff;
+    --line: #274031;
+    --line-soft: #1e3327;
     --focus: #7fb0ff;
   }
 }
@@ -70,6 +73,7 @@ html[data-text-size="large"] {
   --color-lawn-light: var(--lawn-light);
   --color-maroon: var(--maroon);
   --color-gold: var(--gold);
+  --color-sky: var(--sky);
   --color-line: var(--line);
   --color-line-soft: var(--line-soft);
   --color-focus: var(--focus);

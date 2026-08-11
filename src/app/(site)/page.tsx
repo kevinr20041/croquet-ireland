@@ -15,6 +15,8 @@ const QUICK_LINKS = [
   { label: "Rules", href: "/rules", icon: BookOpenText },
 ];
 
+const QUICK_LINK_COLORS = ["var(--lawn)", "var(--sky)", "var(--gold)", "var(--maroon)", "var(--lawn-deep)", "var(--sky)"];
+
 export default async function HomePage() {
   const [events, articles, results, albums] = await Promise.all([
     getUpcomingEvents(3),
@@ -26,11 +28,13 @@ export default async function HomePage() {
 
   return (
     <>
-      <section className="border-b border-line bg-paper-tint">
-        <Container className="grid gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-20">
+      <section className="relative overflow-hidden border-b border-line bg-gradient-to-br from-lawn-light/25 via-paper-tint to-sky/10">
+        <div className="pointer-events-none absolute -right-16 -top-24 h-72 w-72 rounded-full bg-lawn/15 blur-3xl" aria-hidden="true" />
+        <div className="pointer-events-none absolute -left-20 bottom-0 h-56 w-56 rounded-full bg-gold/15 blur-3xl" aria-hidden="true" />
+        <Container className="relative grid gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-20">
           <div>
             <p className="mb-3 flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-maroon">
-              <span className="inline-block h-px w-6 bg-gold" />
+              <span className="inline-block h-1 w-6 rounded-full bg-gold" />
               Established players since the 1830s
             </p>
             <h1 className="max-w-xl text-4xl font-semibold leading-tight text-ink sm:text-5xl">
@@ -48,16 +52,18 @@ export default async function HomePage() {
               </ButtonLink>
             </div>
           </div>
-          <div className="overflow-hidden rounded-2xl border border-line bg-paper-raised">
-            <div className="flex aspect-[4/3] items-center justify-center bg-lawn/10">
-              <svg viewBox="0 0 200 150" className="h-4/5 w-4/5 text-lawn" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="10" y="10" width="180" height="130" rx="4" strokeOpacity="0.35" />
-                <path d="M40 120 L40 90 a10 10 0 0 1 20 0 L60 120" strokeLinecap="round" />
-                <path d="M100 120 L100 90 a10 10 0 0 1 20 0 L120 120" strokeLinecap="round" />
-                <path d="M160 120 L160 90 a10 10 0 0 1 20 0 L180 120" strokeOpacity="0.3" strokeLinecap="round" />
-                <circle cx="55" cy="118" r="6" fill="currentColor" stroke="none" />
-                <circle cx="112" cy="118" r="6" fill="currentColor" stroke="none" opacity="0.6" />
-                <line x1="55" y1="118" x2="30" y2="140" strokeLinecap="round" />
+          <div className="overflow-hidden rounded-2xl border border-line bg-paper-raised shadow-sm">
+            <div className="flex aspect-[4/3] items-center justify-center bg-gradient-to-b from-lawn/15 to-lawn/5">
+              <svg viewBox="0 0 200 150" className="h-4/5 w-4/5" fill="none">
+                <rect x="10" y="10" width="180" height="130" rx="4" stroke="var(--lawn)" strokeOpacity="0.3" strokeWidth="2" />
+                <path d="M46 122 L46 96 a9 9 0 0 1 18 0 L64 122" stroke="var(--lawn-deep)" strokeWidth="4" strokeLinecap="round" />
+                <path d="M108 122 L108 96 a9 9 0 0 1 18 0 L126 122" stroke="var(--lawn-deep)" strokeWidth="4" strokeLinecap="round" />
+                <path d="M158 122 L158 96 a9 9 0 0 1 18 0 L176 122" stroke="var(--lawn-deep)" strokeOpacity="0.5" strokeWidth="4" strokeLinecap="round" />
+                <line x1="55" y1="120" x2="26" y2="142" stroke="var(--ink-faint)" strokeWidth="3" strokeLinecap="round" />
+                <circle cx="55" cy="118" r="7" fill="var(--maroon)" />
+                <circle cx="86" cy="130" r="7" fill="var(--gold)" />
+                <circle cx="117" cy="118" r="7" fill="var(--sky)" />
+                <circle cx="148" cy="132" r="7" fill="var(--ink)" />
               </svg>
             </div>
           </div>
@@ -67,13 +73,14 @@ export default async function HomePage() {
       <section className="border-b border-line">
         <Container className="py-8">
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-            {QUICK_LINKS.map(({ label, href, icon: Icon }) => (
+            {QUICK_LINKS.map(({ label, href, icon: Icon }, i) => (
               <Link
                 key={href}
                 href={href}
-                className="flex flex-col items-center gap-2 rounded-xl border border-line bg-paper-raised px-3 py-5 text-center text-sm font-semibold text-ink-soft hover:border-lawn hover:text-lawn-deep"
+                className="quick-link group flex flex-col items-center gap-2 rounded-xl border border-line bg-paper-raised px-3 py-5 text-center text-sm font-semibold text-ink-soft transition-colors hover:border-[var(--accent)] hover:text-ink"
+                style={{ "--accent": QUICK_LINK_COLORS[i % QUICK_LINK_COLORS.length] } as React.CSSProperties}
               >
-                <Icon size={22} />
+                <Icon size={22} className="transition-colors group-hover:[color:var(--accent)]" />
                 {label}
               </Link>
             ))}

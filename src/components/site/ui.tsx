@@ -8,7 +8,7 @@ export function Container({ className = "", children }: { className?: string; ch
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
     <p className="mb-2 flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-maroon">
-      <span className="inline-block h-px w-6 bg-gold" aria-hidden="true" />
+      <span className="inline-block h-1 w-6 rounded-full bg-gold" aria-hidden="true" />
       {children}
     </p>
   );
@@ -67,7 +67,7 @@ export function PageHero({
   description?: string;
 }) {
   return (
-    <section className="border-b border-line bg-paper-tint">
+    <section className="border-b border-line bg-gradient-to-br from-lawn-light/20 via-paper-tint to-sky/10">
       <Container className="py-10 sm:py-14">
         {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
         <h1 className="max-w-2xl text-3xl font-semibold text-ink sm:text-4xl">{title}</h1>
@@ -93,7 +93,7 @@ export function Card({ className = "", children }: { className?: string; childre
 
 export function Tag({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-block rounded-full border border-line bg-paper-tint px-2.5 py-0.5 text-xs font-semibold text-ink-soft">
+    <span className="inline-block rounded-full border border-lawn/25 bg-lawn/10 px-2.5 py-0.5 text-xs font-semibold text-lawn-deep">
       {children}
     </span>
   );
