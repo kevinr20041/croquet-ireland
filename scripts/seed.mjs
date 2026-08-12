@@ -344,29 +344,11 @@ async function seedEvents(clubIds) {
       description: "The Irish AC Croquet Championships — nine trophies across all handicap levels, culminating in finals day.",
       status: "completed",
     },
-    {
-      name: "September Weekend",
-      slug: "september-weekend-2026",
-      start_date: "2026-09-12",
-      end_date: "2026-09-13",
-      venue: "Carrickmines Croquet & Lawn Tennis Club",
-      club_id: carrickmines,
-      competition_type: "AC",
-      description: "Carrickmines' traditional September weekend tournament.",
-      status: "upcoming",
-    },
-    {
-      name: "Irish Golf Croquet Championships 2026",
-      slug: "irish-gc-championships-2026",
-      start_date: "2026-09-19",
-      end_date: "2026-09-20",
-      venue: "Carrickmines Croquet & Lawn Tennis Club",
-      club_id: carrickmines,
-      competition_type: "GC, Championship",
-      description: "Ireland's national Golf Croquet Championships.",
-      status: "upcoming",
-    },
   ];
+  // Note: Carrickmines' "September Weekend" and "Irish Golf Croquet Championships" are real
+  // recurring annual fixtures (see the club's own listing), but the live site does not publish
+  // confirmed 2026 dates for them. Do not seed placeholder/invented dates for real future events —
+  // wait for CAI to add them via /admin/events once dates are confirmed.
   for (const e of EVENTS) {
     await sql`
       insert into events (slug, name, start_date, end_date, venue, club_id, competition_type, description, status)
