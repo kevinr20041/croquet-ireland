@@ -26,6 +26,14 @@ export default async function ClubProfilePage({ params }: PageProps<"/play/clubs
 
       <div className="grid gap-10 lg:grid-cols-[1fr_320px]">
         <div>
+          {club.image_url && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={club.image_url}
+              alt={club.name}
+              className="mb-6 h-64 w-full rounded-2xl border border-line object-cover sm:h-80"
+            />
+          )}
           <h1 className="text-3xl font-semibold text-ink">{club.name}</h1>
           <div className="mt-3 flex flex-wrap gap-1.5">
             {club.croquet_types?.map((t) => (

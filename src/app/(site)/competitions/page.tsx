@@ -52,6 +52,17 @@ export default async function CompetitionsPage() {
           )}
         </Container>
       </section>
+      <Container className="py-14">
+        <SectionHeading eyebrow="History" title="Championship archive" />
+        <div className="flex flex-wrap gap-3">
+          <ButtonLink href="/competitions/champions" variant="secondary">
+            Championship winners since 1900
+          </ButtonLink>
+          <ButtonLink href="/competitions/international-results" variant="secondary">
+            International results
+          </ButtonLink>
+        </div>
+      </Container>
     </>
   );
 }

@@ -88,7 +88,16 @@ export function ClubDirectory({ clubs, counties }: { clubs: Club[]; counties: st
 
       <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((club) => (
-          <Card key={club.id} className="flex flex-col p-5">
+          <Card key={club.id} className="flex flex-col overflow-hidden">
+            {club.image_url ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={club.image_url} alt={club.name} className="h-40 w-full object-cover" />
+            ) : (
+              <div className="flex h-40 w-full items-center justify-center bg-paper-tint text-ink-faint">
+                <MapPin size={28} />
+              </div>
+            )}
+          <div className="flex flex-1 flex-col p-5">
             <h2 className="text-lg font-semibold text-ink">
               <Link href={`/play/clubs/${club.slug}`} className="hover:underline">
                 {club.name}
@@ -127,6 +136,7 @@ export function ClubDirectory({ clubs, counties }: { clubs: Club[]; counties: st
                 </a>
               )}
             </div>
+          </div>
           </Card>
         ))}
         {filtered.length === 0 && (

@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Lora, Public_Sans } from "next/font/google";
+import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 
-const lora = Lora({
+const poppins = Poppins({
   variable: "--font-serif",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["600", "700", "800"],
 });
 
-const publicSans = Public_Sans({
+const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${lora.variable} ${publicSans.variable}`}>
+    <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
       <body className="min-h-screen bg-paper text-ink antialiased">{children}</body>
     </html>
   );

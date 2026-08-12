@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { FileText, ExternalLink, Download } from "lucide-react";
 import { Container, PageHero, formatDate } from "@/components/site/ui";
 import { getAllDocuments } from "@/lib/queries";
+import { EXTERNAL_LINKS } from "@/lib/content";
 
 export const metadata: Metadata = { title: "Rules & Resources" };
 export const dynamic = "force-dynamic";
@@ -13,12 +14,6 @@ const CATEGORY_LABELS: Record<string, string> = {
   policies: "Policies",
   general: "General",
 };
-
-const EXTERNAL_LINKS = [
-  { label: "The Croquet Association (England) — official rules", href: "https://www.croquet.org.uk/" },
-  { label: "Oxford Croquet — coaching notes and tactics", href: "http://www.oxfordcroquet.com/" },
-  { label: "World Croquet Federation", href: "https://worldcroquet.org/" },
-];
 
 export default async function RulesPage() {
   const documents = await getAllDocuments();
