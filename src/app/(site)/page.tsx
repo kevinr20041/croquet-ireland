@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CalendarDays, MapPinned, GraduationCap, Trophy, BookOpenText, ListOrdered } from "lucide-react";
+import { CalendarDays, MapPinned, GraduationCap, Trophy, BookOpenText, ListOrdered, UserPlus } from "lucide-react";
 import { getAllAlbums, getLatestResults, getPublishedArticles, getUpcomingEvents } from "@/lib/queries";
 import { Container, SectionHeading, ButtonLink, formatDate } from "@/components/site/ui";
 import { ArticleCard, EventCard, ResultCard } from "@/components/site/cards";
@@ -12,10 +12,19 @@ const QUICK_LINKS = [
   { label: "Calendar", href: "/competitions/calendar", icon: CalendarDays },
   { label: "Results", href: "/competitions/results", icon: Trophy },
   { label: "Rankings", href: "/rankings", icon: ListOrdered },
+  { label: "Membership", href: "/about/membership", icon: UserPlus },
   { label: "Rules", href: "/rules", icon: BookOpenText },
 ];
 
-const QUICK_LINK_COLORS = ["var(--lawn)", "var(--sky)", "var(--gold)", "var(--maroon)", "var(--lawn-deep)", "var(--sky)"];
+const QUICK_LINK_COLORS = [
+  "var(--lawn)",
+  "var(--sky)",
+  "var(--gold)",
+  "var(--maroon)",
+  "var(--lawn-deep)",
+  "var(--sky)",
+  "var(--gold)",
+];
 
 export default async function HomePage() {
   const [events, articles, results, albums] = await Promise.all([
@@ -72,7 +81,7 @@ export default async function HomePage() {
 
       <section className="border-b border-line">
         <Container className="py-8">
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
             {QUICK_LINKS.map(({ label, href, icon: Icon }, i) => (
               <Link
                 key={href}
