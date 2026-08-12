@@ -60,8 +60,8 @@ export default async function AboutCaiPage() {
               bursaries, and Ireland&apos;s international teams.
             </p>
             <div className="mt-3 flex flex-wrap gap-2">
-              <ButtonLink href="/rules" variant="secondary">
-                Membership forms
+              <ButtonLink href="/about/membership" variant="secondary">
+                Membership &amp; advantages
               </ButtonLink>
             </div>
           </Card>
