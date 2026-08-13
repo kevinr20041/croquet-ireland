@@ -148,6 +148,24 @@ export async function getCouncilMembers() {
   return rows as unknown as CouncilMember[];
 }
 
+export async function searchCouncil(query: string, limit = 10) {
+  const rows = await sql`select * from council_members where name ilike ${"%" + query + "%"} or role ilike ${"%" + query + "%"} limit ${limit}`;
+  return rows as unknown as CouncilMember[];
+}
+
+// ---------- Events search ----------
+
+export async function searchEvents(query: string, limit = 10) {
+  const rows = await sql`
+    select e.*, c.name as club_name
+    from events e left join clubs c on c.id = e.club_id
+    where e.name ilike ${"%" + query + "%"} or e.venue ilike ${"%" + query + "%"} or e.competition_type ilike ${"%" + query + "%"}
+    order by e.start_date desc
+    limit ${limit}
+  `;
+  return rows as unknown as EventRow[];
+}
+
 // ---------- Rankings & Handicaps ----------
 
 export async function getRankings(discipline: "AC" | "GC") {

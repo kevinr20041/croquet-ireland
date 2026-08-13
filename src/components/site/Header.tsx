@@ -25,12 +25,12 @@ export function Header() {
 
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
         <Link href="/" className="flex items-center gap-3">
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-lawn text-paper-raised">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.8">
-              <circle cx="12" cy="12" r="9" />
-              <path d="M8 12h8M12 8v8" strokeLinecap="round" />
-            </svg>
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://q41s7axx6lc9r6rm.public.blob.vercel-storage.com/brand/cai-logo.png"
+            alt="Croquet Association of Ireland"
+            className="h-12 w-12 shrink-0 object-contain"
+          />
           <span>
             <span className="block font-serif text-lg font-semibold leading-tight text-ink">
               Croquet Association

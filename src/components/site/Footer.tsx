@@ -88,9 +88,25 @@ export function Footer() {
       </div>
 
       <div className="border-t border-line">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-4 text-xs text-ink-faint">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-5 text-xs text-ink-faint">
           <p>&copy; {new Date().getFullYear()} Croquet Association of Ireland.</p>
-          <p>We confirm compliance with the Governance Code for the Community, Voluntary and Charity sector.</p>
+          <div className="flex flex-wrap items-center gap-4">
+            <p className="max-w-xs">We confirm compliance with the Governance Code for the Community, Voluntary and Charity sector.</p>
+            <a href="https://www.sportireland.ie" target="_blank" rel="noopener noreferrer" className="shrink-0">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://q41s7axx6lc9r6rm.public.blob.vercel-storage.com/brand/sport-ireland-logo.png"
+                alt="Sport Ireland"
+                className="h-9 w-auto object-contain"
+              />
+            </a>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://q41s7axx6lc9r6rm.public.blob.vercel-storage.com/brand/governance-code-logo.jpg"
+              alt="The Governance Code — A Journey to Success"
+              className="h-9 w-auto object-contain"
+            />
+          </div>
         </div>
       </div>
     </footer>
