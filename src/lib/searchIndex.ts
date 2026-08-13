@@ -34,6 +34,18 @@ export const PAGE_INDEX: PageIndexEntry[] = [
     keywords: ["international results", "internationals", "vera mcweeney", "appleton trophy", "home internationals"],
   },
   {
+    title: "Tournament Conditions",
+    description: "Entry rules, hoop-setting, conduct and handicap conditions for CAI tournaments.",
+    href: "/competitions/tournament-conditions",
+    keywords: ["tournament conditions", "regulations", "hoop setting", "conduct", "entry rules"],
+  },
+  {
+    title: "History",
+    description: "Croquet in Ireland, the Croquet Gazette archive, Carrickmines' centenary, and the 1900 photo gallery.",
+    href: "/about-croquet/history",
+    keywords: ["croquet gazette", "carrickmines 100 years", "how the irish invented croquet", "1900 gallery", "kinealy"],
+  },
+  {
     title: "Rules & Resources",
     description: "Rules, tournament conditions, governance documents, and useful external links.",
     href: "/rules",

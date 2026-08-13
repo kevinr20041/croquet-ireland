@@ -53,16 +53,27 @@ export default async function CompetitionsPage() {
         </Container>
       </section>
       <Container className="py-14">
-        <SectionHeading eyebrow="History" title="Championship archive" />
-        <div className="flex flex-wrap gap-3">
-          <ButtonLink href="/competitions/champions" variant="secondary">
-            Championship winners since 1900
-          </ButtonLink>
-          <ButtonLink href="/competitions/international-results" variant="secondary">
-            International results
-          </ButtonLink>
-        </div>
+        <SectionHeading eyebrow="Before you enter" title="Tournament conditions" />
+        <p className="mb-4 max-w-2xl text-ink-soft">
+          The conditions every CAI tournament runs under — entry rules, hoop-setting, conduct and handicaps.
+        </p>
+        <ButtonLink href="/competitions/tournament-conditions" variant="secondary">
+          Read tournament conditions
+        </ButtonLink>
       </Container>
+      <section className="border-t border-line bg-paper-tint">
+        <Container className="py-14">
+          <SectionHeading eyebrow="History" title="Championship archive" />
+          <div className="flex flex-wrap gap-3">
+            <ButtonLink href="/competitions/champions" variant="secondary">
+              Championship winners since 1900
+            </ButtonLink>
+            <ButtonLink href="/competitions/international-results" variant="secondary">
+              International results
+            </ButtonLink>
+          </div>
+        </Container>
+      </section>
     </>
   );
 }

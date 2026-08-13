@@ -14,11 +14,27 @@ import type {
 
 // ---------- Articles ----------
 
-export async function getPublishedArticles(limit = 20, category?: string) {
-  const rows = category
-    ? await sql`select * from articles where status = 'published' and category = ${category} order by published_at desc nulls last limit ${limit}`
-    : await sql`select * from articles where status = 'published' order by published_at desc nulls last limit ${limit}`;
+export async function getPublishedArticles(limit = 20, category?: string, year?: string) {
+  let rows;
+  if (category && year) {
+    rows = await sql`select * from articles where status = 'published' and category = ${category} and extract(year from published_at)::text = ${year} order by published_at desc nulls last limit ${limit}`;
+  } else if (category) {
+    rows = await sql`select * from articles where status = 'published' and category = ${category} order by published_at desc nulls last limit ${limit}`;
+  } else if (year) {
+    rows = await sql`select * from articles where status = 'published' and extract(year from published_at)::text = ${year} order by published_at desc nulls last limit ${limit}`;
+  } else {
+    rows = await sql`select * from articles where status = 'published' order by published_at desc nulls last limit ${limit}`;
+  }
   return rows as unknown as Article[];
+}
+
+export async function getArticleYears() {
+  const rows = await sql`
+    select distinct extract(year from published_at)::int as year
+    from articles where status = 'published' and published_at is not null
+    order by year desc
+  `;
+  return (rows as { year: number }[]).map((r) => r.year);
 }
 
 export async function getArticleBySlug(slug: string) {

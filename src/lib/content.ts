@@ -10,6 +10,16 @@ Irish players of the era — Cyril and Herbert Corbally, C.L. O'Callaghan, Nina 
 
 Sources: Clive Martin & Simon Williams, "A History of Croquet in Ireland" (2004).`;
 
+export const GAZETTE_SUMMARY = `CAI's archive includes notes compiled from early editions of the Croquet Gazette, tracing the sport's development in Ireland club by club through the 1900s and 1910s.
+
+Tournaments were already being advertised at Glenageary and Athlone in 1900, and the first North of Ireland Championship followed at Belfast in 1901. In 1902, an Ireland team of C. Corbally, R.N. Roper, J.R. Murphy and S.G. Butson played England at Wimbledon — quite possibly the first international croquet match ever played. Clubs multiplied quickly over the following decade: Rushbrooke could field ten lawns for its 1904 tournament, Athenry reportedly had twelve, and Cork's Mardyke tournament ran on eleven lawns by 1907.
+
+Carrickmines entered the story in 1909, founded by Miss Barrett on seven lawns — a club that would go on to become the permanent home of the Championship of Ireland from that year onward, a role it still holds today.`;
+
+export const CARRICKMINES_100_SUMMARY = `Written for the club's 2009 centenary, this piece traces how the Championship of Ireland came to Carrickmines in 1909, after complaints about court conditions — and a packed tennis season — made Fitzwilliam LTC's lawns unworkable for serious competition. Carrickmines set aside seven new lawns specifically for the tournament, and both the Championship of County Dublin and the Championship of Ireland found a permanent home there.
+
+Originally run as a six-day week, the tournament expanded to a second weekend in the 1990s as entries grew, and the event's format has continued to evolve since — a century on, Carrickmines remains the sport's principal home in Ireland.`;
+
 export const GETTING_STARTED_TEXT = `There are several ways to begin playing croquet.
 
 The simplest is to buy a set of croquet equipment and set up in your back garden — knock a ball around and run it through hoops just for fun. You need a reasonably large, flat area of short-cut lawn — think closer to a putting green than a rough fairway, though a decent lawn will get you started. The CAI also has a croquet set available for free loan if you'd like to try before you buy.
