@@ -1,28 +1,42 @@
 import Link from "next/link";
-import { CalendarDays, MapPin } from "lucide-react";
+import { CalendarDays, Clock, MapPin, ArrowRight } from "lucide-react";
 import type { Article, EventRow, ResultRow } from "@/lib/types";
 import { Card, Tag, formatDate, formatDateRange } from "./ui";
 
 export function EventCard({ event }: { event: EventRow }) {
   return (
-    <Card className="flex flex-col p-5">
-      <p className="flex items-center gap-1.5 text-sm font-semibold text-lawn-deep">
-        <CalendarDays size={16} />
-        {formatDateRange(event.start_date, event.end_date)}
-      </p>
-      <h3 className="mt-2 text-lg font-semibold text-ink">
-        <Link href={`/competitions/calendar/${event.slug}`} className="hover:underline">
-          {event.name}
-        </Link>
-      </h3>
-      {(event.venue || event.club_name) && (
-        <p className="mt-1 flex items-center gap-1.5 text-sm text-ink-soft">
-          <MapPin size={15} />
-          {event.venue ?? event.club_name}
+    <Link
+      href={`/competitions/calendar/${event.slug}`}
+      className="group block focus-visible:outline-none"
+      aria-label={`${event.name} — see more information`}
+    >
+      <Card className="flex h-full flex-col p-5 transition-colors group-hover:border-lawn group-focus-visible:border-lawn group-focus-visible:ring-2 group-focus-visible:ring-focus">
+        <p className="flex items-center gap-1.5 text-sm font-semibold text-lawn-deep">
+          <CalendarDays size={16} />
+          {formatDateRange(event.start_date, event.end_date)}
         </p>
-      )}
-      {event.competition_type && <div className="mt-3"><Tag>{event.competition_type}</Tag></div>}
-    </Card>
+        {event.start_time && (
+          <p className="mt-1 flex items-center gap-1.5 text-sm text-ink-soft">
+            <Clock size={15} />
+            {event.start_time}
+            {event.end_time ? ` – ${event.end_time}` : ""}
+          </p>
+        )}
+        <h3 className="mt-2 text-lg font-semibold text-ink group-hover:underline">{event.name}</h3>
+        {(event.venue || event.club_name) && (
+          <p className="mt-1 flex items-center gap-1.5 text-sm text-ink-soft">
+            <MapPin size={15} />
+            {event.venue ?? event.club_name}
+          </p>
+        )}
+        <div className="mt-3 flex flex-1 items-end justify-between gap-2">
+          {event.competition_type ? <Tag>{event.competition_type}</Tag> : <span />}
+          <span className="flex items-center gap-1 text-xs font-semibold text-lawn-deep opacity-0 transition-opacity group-hover:opacity-100">
+            More information <ArrowRight size={13} />
+          </span>
+        </div>
+      </Card>
+    </Link>
   );
 }
 

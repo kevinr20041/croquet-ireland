@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, CalendarDays, MapPin, FileText, ExternalLink } from "lucide-react";
+import { ArrowLeft, CalendarDays, Clock, MapPin, FileText, ExternalLink } from "lucide-react";
 import { getEventBySlug } from "@/lib/queries";
 import { Container, formatDateRange } from "@/components/site/ui";
 
@@ -27,9 +27,20 @@ export default async function EventDetailPage({ params }: PageProps<"/competitio
         <CalendarDays size={16} /> {formatDateRange(event.start_date, event.end_date)}
       </p>
       <h1 className="mt-2 text-3xl font-semibold text-ink">{event.name}</h1>
+      {event.start_time && (
+        <p className="mt-2 flex items-center gap-1.5 text-ink-soft">
+          <Clock size={16} /> {event.start_time}
+          {event.end_time ? ` – ${event.end_time}` : ""}
+        </p>
+      )}
       {(event.venue || event.club_name) && (
         <p className="mt-2 flex items-center gap-1.5 text-ink-soft">
           <MapPin size={16} /> {event.venue ?? event.club_name}
+        </p>
+      )}
+      {!event.venue && !event.club_name && (
+        <p className="mt-2 flex items-center gap-1.5 text-sm text-ink-faint">
+          <MapPin size={16} /> Venue to be confirmed
         </p>
       )}
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_300px]">
