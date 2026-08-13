@@ -4,6 +4,7 @@ import { Newspaper, MapPinned, FileText, CalendarDays, Users, Compass } from "lu
 import { Container, PageHero, formatDateRange } from "@/components/site/ui";
 import { searchArticles, searchClubs, searchDocuments, searchEvents, searchCouncil } from "@/lib/queries";
 import { searchPageIndex } from "@/lib/searchIndex";
+import { SearchAutocomplete } from "./SearchAutocomplete";
 
 export const metadata: Metadata = { title: "Search" };
 export const dynamic = "force-dynamic";
@@ -27,19 +28,7 @@ export default async function SearchPage({ searchParams }: PageProps<"/search">)
         description="Rankings, handicaps, news, clubs, calendar, council and documents, all in one place."
       />
       <Container className="py-10">
-        <form action="/search" method="get" className="flex gap-2">
-          <input
-            type="search"
-            name="q"
-            defaultValue={q}
-            placeholder="Search rankings, news, clubs, calendar, documents…"
-            className="min-h-[48px] flex-1 rounded-lg border border-line bg-paper-raised px-4 py-2.5 text-lg text-ink"
-            autoFocus
-          />
-          <button type="submit" className="min-h-[48px] rounded-lg bg-lawn px-6 font-semibold text-paper-raised hover:bg-lawn-deep">
-            Search
-          </button>
-        </form>
+        <SearchAutocomplete initialQuery={q} />
 
         {q && (
           <p className="mt-4 text-sm text-ink-faint">
