@@ -10,7 +10,7 @@ const SECTIONS = [
     points: [
       "Entries must be submitted with the full fee, and entrants must be Associates of the CAI or of an affiliated national croquet association.",
       "All CAI tournaments run under the CAI's Regulations for Tournaments.",
-      "Requests for leave (time off during the event) must be made in writing at the time of entry, or to the Manager at the start of play — later requests aren't considered.",
+      "Requests for leave (time off during the event) must be made in writing at the time of entry, or to the Manager at the start of play. Later requests are not considered.",
       "Players are responsible for entering and playing at their correct handicap; playing off the wrong handicap can lead to disqualification.",
     ],
   },
@@ -35,14 +35,14 @@ const SECTIONS = [
     title: "Conduct",
     points: [
       "Players are expected to wear predominantly white clothing on court (the Manager may allow rain gear).",
-      "Anyone — player or spectator — behaving in a way that disrupts play or brings the game into disrepute may be asked to leave the vicinity of the courts.",
+      "Anyone, whether player or spectator, behaving in a way that disrupts play or brings the game into disrepute may be asked to leave the vicinity of the courts.",
       "Spectators should stay aware of nearby games and never walk across a player's line of aim.",
     ],
   },
   {
     title: "Handicaps",
     points: [
-      "Tournaments run according to the CAI's published Association Croquet and Golf Croquet handicap systems — see the current lists under Rankings & Handicaps.",
+      "Tournaments run according to the CAI's published Association Croquet and Golf Croquet handicap systems. See the current lists under Rankings & Handicaps.",
     ],
   },
 ];
@@ -53,7 +53,7 @@ export default function TournamentConditionsPage() {
       <PageHero
         eyebrow="Competitions"
         title="Tournament conditions"
-        description="The conditions every CAI tournament runs under, summarised — see the full CAI Regulations for Tournaments for the complete rules."
+        description="The conditions every CAI tournament runs under, summarised. See the full CAI Regulations for Tournaments for the complete rules."
       />
       <Container className="py-14">
         <div className="grid gap-5 sm:grid-cols-2">

@@ -85,7 +85,7 @@ export function EventForm({ event, clubs }: { event?: EventRow; clubs: Club[] })
       </Field>
       <Field label="Club">
         <Select value={clubId} onChange={(e) => setClubId(e.target.value)}>
-          <option value="">— None —</option>
+          <option value="">None</option>
           {clubs.map((c) => (
             <option key={c.id} value={c.id}>
               {c.name}

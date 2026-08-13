@@ -31,7 +31,7 @@ export default function MembershipPage() {
       <PageHero
         eyebrow="About CAI"
         title="Membership of Croquet Association of Ireland"
-        description="Join as an individual, or register your club — membership supports coaching, bursaries, lawn development and Ireland's international teams."
+        description="Join as an individual, or register your club. Membership supports coaching, bursaries, lawn development and Ireland's international teams."
       />
 
       <Container className="py-14">
@@ -63,7 +63,7 @@ export default function MembershipPage() {
               <strong className="text-ink">Full member:</strong> €20 / year &nbsp;·&nbsp;{" "}
               <strong className="text-ink">Junior (under 18):</strong> €5 / year.
               <br />
-              Online payment is being set up — in the meantime, email the Secretary to arrange payment
+              Online payment is being set up. In the meantime, email the Secretary to arrange payment
               alongside your application.
             </p>
             <ButtonLink href="mailto:secretary@croquetireland.com" variant="secondary" className="mt-4">

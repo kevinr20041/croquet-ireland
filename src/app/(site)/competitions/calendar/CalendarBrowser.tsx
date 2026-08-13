@@ -106,7 +106,7 @@ export function CalendarBrowser({ events }: { events: EventRow[] }) {
           onFocus={() => setOpen(true)}
           onBlur={() => setTimeout(() => setOpen(false), 120)}
           onKeyDown={handleKeyDown}
-          placeholder="Search events by name or date — e.g. &ldquo;Championships&rdquo; or &ldquo;September&rdquo;"
+          placeholder="Search events by name or date, for example &ldquo;Championships&rdquo; or &ldquo;September&rdquo;"
           className="min-h-[48px] w-full rounded-lg border border-line bg-paper-raised py-2.5 pl-11 pr-11 text-ink placeholder:text-ink-faint"
         />
         {query && (

@@ -8,7 +8,7 @@ export function EventCard({ event }: { event: EventRow }) {
     <Link
       href={`/competitions/calendar/${event.slug}`}
       className="group block focus-visible:outline-none"
-      aria-label={`${event.name} — see more information`}
+      aria-label={`${event.name}: see more information`}
     >
       <Card className="flex h-full flex-col p-5 transition-colors group-hover:border-lawn group-focus-visible:border-lawn group-focus-visible:ring-2 group-focus-visible:ring-focus">
         <p className="flex items-center gap-1.5 text-sm font-semibold text-lawn-deep">

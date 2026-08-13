@@ -5,19 +5,19 @@ export type PageIndexEntry = {
   keywords: string[];
 };
 
-// A small curated index of hub/feature pages, so generic searches ("council",
-// "constitution", "calendar", "rankings") reliably land on the right page even
-// when there's no single database record whose title matches exactly.
+// A small curated index of hub and feature pages, so general searches such as
+// "council", "constitution", "calendar" or "rankings" reliably land on the
+// right page even when no single database record matches the title exactly.
 export const PAGE_INDEX: PageIndexEntry[] = [
   {
     title: "Rankings & Handicaps",
-    description: "AC rankings, GC rankings, AC handicaps and the GC handicap table — search for a player.",
+    description: "AC rankings, GC rankings, AC handicaps and the GC handicap table. Search for a player by name.",
     href: "/rankings",
     keywords: ["ranking", "rankings", "rank", "handicap", "handicaps", "golf croquet ranking", "ac ranking", "gc ranking", "handicap list", "handicap table"],
   },
   {
     title: "CAI Calendar",
-    description: "Every CAI tournament and fixture, upcoming and past — searchable by name or date.",
+    description: "Every CAI tournament and fixture, upcoming and past, searchable by name or date.",
     href: "/competitions/calendar",
     keywords: ["calendar", "fixtures", "schedule", "cai calendar", "events"],
   },
@@ -29,7 +29,7 @@ export const PAGE_INDEX: PageIndexEntry[] = [
   },
   {
     title: "International Results",
-    description: "Ireland's international team match history — Home Internationals, Vera McWeeney and Appleton trophies.",
+    description: "Ireland's international team match history, including the Home Internationals, and the Vera McWeeney and Appleton trophies.",
     href: "/competitions/international-results",
     keywords: ["international results", "internationals", "vera mcweeney", "appleton trophy", "home internationals"],
   },
@@ -52,7 +52,7 @@ export const PAGE_INDEX: PageIndexEntry[] = [
     keywords: ["rules", "links", "useful links", "external links", "tournament conditions", "document library", "documents"],
   },
   {
-    title: "About CAI — Council & Governance",
+    title: "About CAI: Council & Governance",
     description: "The CAI Council, governance and Sport Ireland compliance information.",
     href: "/about",
     keywords: ["council", "cai council", "governance", "committee", "sport ireland", "governance code"],
@@ -82,7 +82,7 @@ export const PAGE_INDEX: PageIndexEntry[] = [
     keywords: ["gallery", "photos", "pictures", "images", "albums"],
   },
   {
-    title: "About Croquet — History",
+    title: "About Croquet: History",
     description: "The history of croquet in Ireland.",
     href: "/about-croquet/history",
     keywords: ["history", "history of croquet"],

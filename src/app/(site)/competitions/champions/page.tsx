@@ -10,7 +10,7 @@ export default function ChampionshipWinnersPage() {
       <PageHero
         eyebrow="Competitions"
         title="Championship winners"
-        description="A full honour roll of Irish croquet champions — the Singles Championship of Ireland dates back to 1900."
+        description="A full honour roll of Irish croquet champions. The Singles Championship of Ireland dates back to 1900."
       />
       <Container className="py-14">
         <div className="grid gap-10 lg:grid-cols-2">

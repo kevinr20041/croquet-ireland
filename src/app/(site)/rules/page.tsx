@@ -27,7 +27,7 @@ export default async function RulesPage() {
       <PageHero
         eyebrow="Rules & Resources"
         title="Rules, policies and documents"
-        description="Everything the CAI publishes — from tournament conditions to governance documents — in one searchable library."
+        description="Everything the CAI publishes, from tournament conditions to governance documents, in one searchable library."
       />
       <Container className="py-14">
         {Object.entries(grouped).map(([category, docs]) => (

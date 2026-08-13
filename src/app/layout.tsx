@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Croquet Association of Ireland",
   },
   description:
-    "The governing body for the sport of croquet in Ireland — clubs, competitions, results, rankings and how to start playing.",
+    "The governing body for the sport of croquet in Ireland: clubs, competitions, results, rankings and how to start playing.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

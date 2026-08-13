@@ -14,7 +14,7 @@ export default async function ClubsPage() {
       <PageHero
         eyebrow="Play Croquet"
         title="Find a club"
-        description={`${clubs.length} affiliated clubs across Ireland — search by county or by the type of croquet on offer.`}
+        description={`${clubs.length} affiliated clubs across Ireland. Search by county or by the type of croquet on offer.`}
       />
       <Container className="py-10">
         <ClubDirectory clubs={clubs} counties={counties} />

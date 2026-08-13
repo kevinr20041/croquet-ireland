@@ -15,7 +15,7 @@ export default async function AdminHandicapsPage() {
     <div>
       <AdminPageHeader title="Handicaps" />
       <p className="mb-6 max-w-2xl text-sm text-ink-soft">
-        Handicaps are replaced in full each time you save — paste the latest list and save.
+        Handicaps are replaced in full each time you save. Paste the latest list and save.
       </p>
       <div className="grid gap-10 lg:grid-cols-2">
         <div>

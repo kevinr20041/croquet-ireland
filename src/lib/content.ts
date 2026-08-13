@@ -1,38 +1,38 @@
-export const HISTORY_TEXT = `Few people realise the strength of the influence of Ireland on croquet during the early nineteenth century. Ask most people how they think croquet came to Ireland, and they would probably guess it arrived with the Regiments and was played in the stately homes of the Ascendancy. In fact, the reverse is true: the game was developed in Ireland well before it reached England.
+export const HISTORY_TEXT = `Few people realise the strength of Ireland's influence on croquet during the early nineteenth century. Ask most people how they think croquet came to Ireland, and they would probably guess it arrived with the Regiments and was played in the stately homes of the Ascendancy. In fact, the reverse is true: the game was developed in Ireland well before it reached England.
 
-The Field of 1858 records "meetings of the County Meath Croquet Cracks" — young players who met at each other's houses. That year, one of them, George Annesley Pollok of Oatlands and Newcastle, Co Meath, sent out a copy of his rules under the pseudonym "Corncrake," calling them "The Rules of the Oatlands Club" — the first recorded mention of a croquet club anywhere.
+The Field of 1858 records "meetings of the County Meath Croquet Cracks," a group of young players who met at each other's houses. That year, one of them, George Annesley Pollok of Oatlands and Newcastle, Co Meath, sent out a copy of his rules under the pseudonym "Corncrake," calling them "The Rules of the Oatlands Club." This is the first recorded mention of a croquet club anywhere.
 
-The noted croquet historian Dr Prior wrote in 1872: "One thing only is certain: it is from Ireland that croquet came to England." Records also show the game was played at Greenmount near Castlebellingham, Co Louth, around 1834, and at the Bishop of Tuam's palace and Castlehacket, Co Galway. A report from 1864 states that in 1834/35 the game was played in Kingstown (now Dún Laoghaire) "under the name of Croquet, with implements similar to those now used" — meaning croquet was played in Ireland for almost twenty years before it reached England.
+The noted croquet historian Dr Prior wrote in 1872: "One thing only is certain: it is from Ireland that croquet came to England." Records also show the game was played at Greenmount near Castlebellingham, Co Louth, around 1834, and at the Bishop of Tuam's palace and Castlehacket, Co Galway. A report from 1864 states that in 1834/35 the game was played in Kingstown, now Dún Laoghaire, "under the name of Croquet, with implements similar to those now used." This means croquet was played in Ireland for almost twenty years before it reached England.
 
-The first Irish Croquet Championship is recorded from 1871. The oldest surviving club in Ireland is Rushbrooke Lawn Tennis and Croquet Club, founded in 1882. The Irish Championships were resurrected in 1900, rotating between Belfast, Cork and Fitzwilliam LTC in Dublin — Athenry could once field 12 courts for its tournament. Carrickmines Croquet and Lawn Tennis Club became the permanent home of the Championship in 1909, and remains the sport's principal home in Ireland today.
+The first Irish Croquet Championship is recorded from 1871. The oldest surviving club in Ireland is Rushbrooke Lawn Tennis and Croquet Club, founded in 1882. The Irish Championships were resurrected in 1900, rotating between Belfast, Cork and Fitzwilliam LTC in Dublin. Athenry could once field 12 courts for its own tournament. Carrickmines Croquet and Lawn Tennis Club became the permanent home of the Championship in 1909, and remains the sport's principal home in Ireland today.
 
-Irish players of the era — Cyril and Herbert Corbally, C.L. O'Callaghan, Nina Coote and Peter Duff Mathews among them — dominated both at home and in England, introducing what became known as the "Irish style" of grip and swing.
+Irish players of the era, including Cyril and Herbert Corbally, C.L. O'Callaghan, Nina Coote and Peter Duff Mathews, dominated both at home and in England, introducing what became known as the "Irish style" of grip and swing.
 
 Sources: Clive Martin & Simon Williams, "A History of Croquet in Ireland" (2004).`;
 
 export const GAZETTE_SUMMARY = `CAI's archive includes notes compiled from early editions of the Croquet Gazette, tracing the sport's development in Ireland club by club through the 1900s and 1910s.
 
-Tournaments were already being advertised at Glenageary and Athlone in 1900, and the first North of Ireland Championship followed at Belfast in 1901. In 1902, an Ireland team of C. Corbally, R.N. Roper, J.R. Murphy and S.G. Butson played England at Wimbledon — quite possibly the first international croquet match ever played. Clubs multiplied quickly over the following decade: Rushbrooke could field ten lawns for its 1904 tournament, Athenry reportedly had twelve, and Cork's Mardyke tournament ran on eleven lawns by 1907.
+Tournaments were already being advertised at Glenageary and Athlone in 1900, and the first North of Ireland Championship followed at Belfast in 1901. In 1902, an Ireland team of C. Corbally, R.N. Roper, J.R. Murphy and S.G. Butson played England at Wimbledon, quite possibly the first international croquet match on record. Clubs multiplied quickly over the following decade. Rushbrooke could field ten lawns for its 1904 tournament, Athenry reportedly had twelve, and Cork's Mardyke tournament ran on eleven lawns by 1907.
 
-Carrickmines entered the story in 1909, founded by Miss Barrett on seven lawns — a club that would go on to become the permanent home of the Championship of Ireland from that year onward, a role it still holds today.`;
+Carrickmines entered the story in 1909, founded by Miss Barrett on seven lawns. The club went on to become the permanent home of the Championship of Ireland from that year onward, a role it still holds today.`;
 
-export const CARRICKMINES_100_SUMMARY = `Written for the club's 2009 centenary, this piece traces how the Championship of Ireland came to Carrickmines in 1909, after complaints about court conditions — and a packed tennis season — made Fitzwilliam LTC's lawns unworkable for serious competition. Carrickmines set aside seven new lawns specifically for the tournament, and both the Championship of County Dublin and the Championship of Ireland found a permanent home there.
+export const CARRICKMINES_100_SUMMARY = `Written for the club's 2009 centenary, this piece traces how the Championship of Ireland came to Carrickmines in 1909, after complaints about court conditions, combined with a packed tennis season, made Fitzwilliam LTC's lawns unworkable for serious competition. Carrickmines set aside seven new lawns specifically for the tournament, and both the Championship of County Dublin and the Championship of Ireland found a permanent home there.
 
-Originally run as a six-day week, the tournament expanded to a second weekend in the 1990s as entries grew, and the event's format has continued to evolve since — a century on, Carrickmines remains the sport's principal home in Ireland.`;
+Originally run as a six-day week, the tournament expanded to a second weekend in the 1990s as entries grew, and the event's format has continued to evolve since. A century on, Carrickmines remains the sport's principal home in Ireland.`;
 
 export const GETTING_STARTED_TEXT = `There are several ways to begin playing croquet.
 
-The simplest is to buy a set of croquet equipment and set up in your back garden — knock a ball around and run it through hoops just for fun. You need a reasonably large, flat area of short-cut lawn — think closer to a putting green than a rough fairway, though a decent lawn will get you started. The CAI also has a croquet set available for free loan if you'd like to try before you buy.
+The simplest way is to buy a set of croquet equipment and set it up in your back garden, knocking a ball around and running it through hoops for fun. You will need a reasonably large, flat area of short-cut lawn, closer to a putting green than a rough fairway, though a decent lawn will get you started. The CAI also has a croquet set available for free loan if you would like to try before you buy.
 
-A full-sized lawn is 35 x 28 yards, with extra space around the edges for boundary play — many privately owned lawns are smaller than this.
+A full-sized lawn is 35 by 28 yards, with extra space around the edges for boundary play. Many privately owned lawns are smaller than this.
 
-There are two main forms of the game played competitively in Ireland:
+There are two main forms of the game played competitively in Ireland.
 
-Golf Croquet is the simplest form, and probably the easiest to get started with. Each player takes a single shot in turn, so everyone stays fully involved — it's very family-friendly, but is also played seriously right up to World Championship level (the 2007 Ladies World Championship was held at Carrickmines). If croquet ever became an Olympic sport, it would likely be in this form.
+Golf Croquet is the simplest form, and probably the easiest to get started with. Each player takes a single shot in turn, so everyone stays fully involved. It is a family-friendly game, but is also played seriously up to World Championship level (the 2007 Ladies World Championship was held at Carrickmines). If croquet ever became an Olympic sport, it would likely be in this form.
 
-Association Croquet is a more formal version of garden croquet. A player earns extra shots after running a hoop and after striking another ball, meaning a skilled player can potentially play through all the hoops to the peg while their opponent simply watches — it rewards tactics and break-building.
+Association Croquet is a more formal version of garden croquet. A player earns extra shots after running a hoop and after striking another ball, meaning a skilled player can potentially play through all the hoops to the peg while their opponent watches. It rewards tactics and break-building.
 
-Whichever form appeals, it's worth visiting a croquet club — every CAI-affiliated club welcomes prospective new members and visitors. See the club directory to find one near you.`;
+Whichever form appeals, it is worth visiting a croquet club. Every CAI-affiliated club welcomes new members and visitors. See the club directory to find one near you.`;
 
 export type ChampionshipTable = { title: string; results: [string, string][] };
 
@@ -96,16 +96,16 @@ export const CHAMPIONSHIP_WINNERS: ChampionshipTable[] = [
       ["2026", "Simon Williams"], ["2009", "Andrew Johnston"], ["2008", "E. Cunningham"], ["2007", "E. Cunningham"],
       ["2006", "M. J McInerney"], ["2005", "E. Cunningham"], ["2004", "M. J McInerney"], ["2003", "E. Cunningham"],
       ["2002", "R.N. McInerney"], ["2001", "M.J. McInerney"], ["2000", "E. Cunningham"], ["1999", "S. Williams"],
-      ["1998", "J.I.A. Shorten"], ["1997", "S. Williams"], ["1996", "no competition"], ["1995", "C.S. (Charlie) von Schmieder"],
-      ["1994", "F.J. Rogerson"], ["1993", "no competition"], ["1992", "F.J. Rogerson, M.A. Saurin & S. Williams (tied)"],
-      ["1991", "no competition"], ["1990", "C.M. von Schmieder & S. Williams (tied)"], ["1989", "no competition"],
+      ["1998", "J.I.A. Shorten"], ["1997", "S. Williams"], ["1996", "Not held"], ["1995", "C.S. (Charlie) von Schmieder"],
+      ["1994", "F.J. Rogerson"], ["1993", "Not held"], ["1992", "F.J. Rogerson, M.A. Saurin & S. Williams (tied)"],
+      ["1991", "Not held"], ["1990", "C.M. von Schmieder & S. Williams (tied)"], ["1989", "Not held"],
       ["1988", "C.M. von Schmieder"], ["1987", "C.J. Irwin"],
     ],
   },
   {
     title: "Irish Golf Croquet Championships",
     results: [
-      ["2023", "—"], ["2022", "S. Williams"], ["2021", "M. Stephens"], ["2020", "P.D. Fitzgerald"],
+      ["2023", "Not recorded"], ["2022", "S. Williams"], ["2021", "M. Stephens"], ["2020", "P.D. Fitzgerald"],
       ["2019", "P.D. Fitzgerald"], ["2018", "H. Dodge"], ["2017", "P.D. Fitzgerald"], ["2016", "J. Clingan"],
       ["2015", "J. Clingan"], ["2014", "S. Williams"], ["2013", "P.D. Fitzgerald"], ["2012", "P.D. Fitzgerald"],
       ["2011", "A.E. Cunningham"], ["2010", "A.E. Cunningham"], ["2009", "S. Williams"], ["2008", "P. Fitzgerald"],
@@ -142,114 +142,114 @@ export const CHAMPIONSHIP_WINNERS: ChampionshipTable[] = [
 
 export const INTERNATIONAL_RESULTS_SECTIONS = [
   {
-    title: "Ireland v Great Britain — Home Internationals (Ireland, England, Scotland, Wales)",
+    title: "Ireland v Great Britain: Home Internationals (Ireland, England, Scotland, Wales)",
     lines: [
-      "2006 GB 9 Ireland 6 — won by England, Ireland 3rd", "2005 Ireland 8.5 GB 6.5 — won by England, Ireland 2nd",
-      "2004 G.B. 13 : Ireland 2 — won by England, Ireland 2nd", "2003 Ireland 5 : G.B. 10 — won by England, Ireland 3rd",
-      "2002 — won by England, Ireland 2nd", "2001 G.B. 9 : Ireland 0 — won by Ireland",
-      "2000 Ireland 4 : Gt Britain 5 — won by England, Ireland 2nd", "1999 — won by Ireland",
-      "1998 — won by England, Ireland 3rd", "1997 — won by England, Ireland 3rd", "1996 — won by England, Ireland 3rd",
-      "1995 — won by England, Ireland 4th", "1994 — won by England, Ireland 2nd", "1993 — won by England, Ireland 2nd",
-      "1992 — won by England, Ireland 4th", "1991 — won by England, Ireland 3rd", "1990 — won by England, Ireland 2nd",
-      "1989 — won by England, Ireland 2nd", "1988 — won by Ireland", "1987 — won by England, Ireland 3rd",
-      "1986 — won by England, Ireland 2nd", "1985 — won by England, Ireland 4th", "1984 — won by England, Ireland 4th",
-      "1983 — won by England, Ireland 2nd", "1982 — won by England, Ireland 2nd", "1981 — won by Scotland, Ireland 4th",
+      "2006: GB 9 Ireland 6 (won by England, Ireland 3rd)", "2005: Ireland 8.5 GB 6.5 (won by England, Ireland 2nd)",
+      "2004: G.B. 13, Ireland 2 (won by England, Ireland 2nd)", "2003: Ireland 5, G.B. 10 (won by England, Ireland 3rd)",
+      "2002: won by England (Ireland 2nd)", "2001: G.B. 9, Ireland 0 (won by Ireland)",
+      "2000: Ireland 4, Gt Britain 5 (won by England, Ireland 2nd)", "1999: won by Ireland",
+      "1998: won by England (Ireland 3rd)", "1997: won by England (Ireland 3rd)", "1996: won by England (Ireland 3rd)",
+      "1995: won by England (Ireland 4th)", "1994: won by England (Ireland 2nd)", "1993: won by England (Ireland 2nd)",
+      "1992: won by England (Ireland 4th)", "1991: won by England (Ireland 3rd)", "1990: won by England (Ireland 2nd)",
+      "1989: won by England (Ireland 2nd)", "1988: won by Ireland", "1987: won by England (Ireland 3rd)",
+      "1986: won by England (Ireland 2nd)", "1985: won by England (Ireland 4th)", "1984: won by England (Ireland 4th)",
+      "1983: won by England (Ireland 2nd)", "1982: won by England (Ireland 2nd)", "1981: won by Scotland (Ireland 4th)",
     ],
   },
   {
-    title: "Ireland v USA — Carter Challenge Trophy",
+    title: "Ireland v USA: Carter Challenge Trophy",
     lines: [
-      "2006 Ireland 13 : USA 8", "2001 U.S.A. 10 : Ireland 11", "1999 Ireland 20½ : U.S.A. 5½",
-      "1997 Ireland 15 : U.S.A. 12", "1995 U.S.A. 10 : Ireland 8",
+      "2006: Ireland 13, USA 8", "2001: U.S.A. 10, Ireland 11", "1999: Ireland 20½, U.S.A. 5½",
+      "1997: Ireland 15, U.S.A. 12", "1995: U.S.A. 10, Ireland 8",
     ],
   },
   {
-    title: "Ireland v South Africa — Maureen Bamford Trophy",
-    lines: ["2000 Ireland 13 : S Africa 8", "1998 S Africa 15 : Ireland 7"],
+    title: "Ireland v South Africa: Maureen Bamford Trophy",
+    lines: ["2000: Ireland 13, S Africa 8", "1998: S Africa 15, Ireland 7"],
   },
   {
     title: "Ireland v Jersey",
     lines: [
-      "2005 Ireland 18 : Jersey 15", "2000 Ireland 12 : Jersey 0", "1999 Jersey 2 : Ireland 4",
-      "1998 Ireland 13 : Jersey 7", "1997 Jersey 19 : Ireland 11", "1996 Jersey 5 : Ireland 4",
+      "2005: Ireland 18, Jersey 15", "2000: Ireland 12, Jersey 0", "1999: Jersey 2, Ireland 4",
+      "1998: Ireland 13, Jersey 7", "1997: Jersey 19, Ireland 11", "1996: Jersey 5, Ireland 4",
     ],
   },
   {
     title: "Ireland v Wales",
-    lines: ["2000 Ireland 6.5 : Wales 3.5"],
+    lines: ["2000: Ireland 6.5, Wales 3.5"],
   },
   {
     title: "Ireland v France",
     lines: [
-      "1994 France 10 : Ireland 6", "1993 Ireland 3 : France 3 (winners)", "1992 France 12 : Ireland 8",
-      "1991 Ireland 14 : France 3", "1990 France 2 : Ireland 1",
+      "1994: France 10, Ireland 6", "1993: Ireland 3, France 3 (winners)", "1992: France 12, Ireland 8",
+      "1991: Ireland 14, France 3", "1990: France 2, Ireland 1",
     ],
   },
   {
     title: "Ireland v Switzerland",
     lines: [
-      "2000 Ireland 'B' 6 : Switzerland 6", "1995 Ireland 12 : Switzerland 8", "1994 Switzerland 8 : Ireland 12",
-      "1993 Ireland 19 : Switzerland 1", "1992 Switzerland 8 : Ireland 4", "1991 Ireland 6 : Switzerland 6 (winners)",
+      "2000: Ireland 'B' 6, Switzerland 6", "1995: Ireland 12, Switzerland 8", "1994: Switzerland 8, Ireland 12",
+      "1993: Ireland 19, Switzerland 1", "1992: Switzerland 8, Ireland 4", "1991: Ireland 6, Switzerland 6 (winners)",
     ],
   },
   {
     title: "Ireland \"B\" Internationals",
     lines: [
-      "2000 Ireland 12 : Wales B 8", "1999 Ireland B 13 : Belgium B 5", "1999 Ireland B 10 : Scotland 8",
-      "1998 Belgium B 6 : Ireland B 12", "1998 Scotland B 7 : Ireland B 13", "1997 Ireland B 14 : Scotland B 5",
+      "2000: Ireland 12, Wales B 8", "1999: Ireland B 13, Belgium B 5", "1999: Ireland B 10, Scotland 8",
+      "1998: Belgium B 6, Ireland B 12", "1998: Scotland B 7, Ireland B 13", "1997: Ireland B 14, Scotland B 5",
     ],
   },
   {
     title: "Junior Internationals (under 18)",
-    lines: ["1990 England 8 : Ireland 2"],
+    lines: ["1990: England 8, Ireland 2"],
   },
   {
     title: "Other International Matches",
     lines: [
-      "1996 Ireland 1 : Australia 8", "1990 Ireland 14 : U.S.A. 22", "1986 Ireland 2 : Australia 7",
-      "1985 U.S.A. 14 : Ireland 16", "1985 Ireland 13 : U.S.A. 11", "1979 Ireland 1 : Australia 8",
-      "1974 Ireland 0 : Australia 9", "1958 Ireland 6 : England 6", "1939 Ireland 3 : England 3",
-      "1937 Ireland 2 : Australia 4", "1902 England 5 : Ireland 3",
+      "1996: Ireland 1, Australia 8", "1990: Ireland 14, U.S.A. 22", "1986: Ireland 2, Australia 7",
+      "1985: U.S.A. 14, Ireland 16", "1985: Ireland 13, U.S.A. 11", "1979: Ireland 1, Australia 8",
+      "1974: Ireland 0, Australia 9", "1958: Ireland 6, England 6", "1939: Ireland 3, England 3",
+      "1937: Ireland 2, Australia 4", "1902: England 5, Ireland 3",
     ],
   },
   {
     title: "Vera McWeeney Trophy (CAI v English CA)",
     lines: [
-      "2005 won by England, Surbiton", "2004 won by England, Carrickmines", "2003 won by Ireland, Bristol",
-      "2002 won by Ireland, Carrickmines", "2001 won by England, Southport", "2000 won by Ireland, Carrickmines",
-      "1999 won by Ireland, Cheltenham", "1998 won by England, Carrickmines", "1997 won by Ireland, Southport",
-      "1996 won by England, Carrickmines", "1995 won by Ireland, Southport", "1994 won by Ireland, Carrickmines",
-      "1993 won by England, Cheltenham", "1992 won by England, Carrickmines", "1991 won by England, Southport",
-      "1990 won by Ireland, Carrickmines", "1989 won by Ireland, Surbiton", "1988 won by Ireland, Carrickmines",
-      "1987 won by England, Southport", "1986 won by England, Carrickmines", "1985 won by England, Cheltenham",
-      "1984 won by Ireland, Carrickmines", "1983 won by England, Bowdon", "1982 won by Ireland, Carrickmines",
-      "1981 won by England", "1980 won by Ireland, Carrickmines",
+      "2005: won by England, Surbiton", "2004: won by England, Carrickmines", "2003: won by Ireland, Bristol",
+      "2002: won by Ireland, Carrickmines", "2001: won by England, Southport", "2000: won by Ireland, Carrickmines",
+      "1999: won by Ireland, Cheltenham", "1998: won by England, Carrickmines", "1997: won by Ireland, Southport",
+      "1996: won by England, Carrickmines", "1995: won by Ireland, Southport", "1994: won by Ireland, Carrickmines",
+      "1993: won by England, Cheltenham", "1992: won by England, Carrickmines", "1991: won by England, Southport",
+      "1990: won by Ireland, Carrickmines", "1989: won by Ireland, Surbiton", "1988: won by Ireland, Carrickmines",
+      "1987: won by England, Southport", "1986: won by England, Carrickmines", "1985: won by England, Cheltenham",
+      "1984: won by Ireland, Carrickmines", "1983: won by England, Bowdon", "1982: won by Ireland, Carrickmines",
+      "1981: won by England", "1980: won by Ireland, Carrickmines",
     ],
   },
   {
     title: "Appleton Trophy (CAI v Scottish CA)",
     lines: [
-      "2026 lost at Edinburgh, 9-16", "2006 won by Ireland, Edinburgh", "2005 won by Ireland, Carrickmines",
-      "2004 won by Ireland, Edinburgh", "2003 won by Scotland, Carrickmines", "2002 won by Scotland, Glasgow",
-      "2001 won by Scotland, Carrickmines", "2000 won by Scotland, Glasgow", "1999 won by Ireland, Carrickmines",
-      "1998 won by Ireland, Glasgow", "1997 won by Ireland, Carrickmines", "1996 won by Scotland, Glasgow",
-      "1995 won by Ireland, Carrickmines", "1994 won by Scotland, Glasgow", "1993 won by Ireland, Carrickmines",
-      "1992 won by Scotland, Glasgow", "1991 won by Ireland, Carrickmines", "1990 won by Scotland, Glasgow",
-      "1989 won by Scotland, Carrickmines", "1988 won by Scotland, Glasgow", "1987 won by Ireland, Carrickmines",
-      "1986 won by England, Carrickmines", "1985 won by England, Cheltenham", "1984 won by Ireland, Carrickmines",
-      "1983 won by England, Bowdon", "1982 won by Ireland, Carrickmines", "1981 won by England",
-      "1980 won by Ireland, Carrickmines",
+      "2026: lost at Edinburgh, 9-16", "2006: won by Ireland, Edinburgh", "2005: won by Ireland, Carrickmines",
+      "2004: won by Ireland, Edinburgh", "2003: won by Scotland, Carrickmines", "2002: won by Scotland, Glasgow",
+      "2001: won by Scotland, Carrickmines", "2000: won by Scotland, Glasgow", "1999: won by Ireland, Carrickmines",
+      "1998: won by Ireland, Glasgow", "1997: won by Ireland, Carrickmines", "1996: won by Scotland, Glasgow",
+      "1995: won by Ireland, Carrickmines", "1994: won by Scotland, Glasgow", "1993: won by Ireland, Carrickmines",
+      "1992: won by Scotland, Glasgow", "1991: won by Ireland, Carrickmines", "1990: won by Scotland, Glasgow",
+      "1989: won by Scotland, Carrickmines", "1988: won by Scotland, Glasgow", "1987: won by Ireland, Carrickmines",
+      "1986: won by England, Carrickmines", "1985: won by England, Cheltenham", "1984: won by Ireland, Carrickmines",
+      "1983: won by England, Bowdon", "1982: won by Ireland, Carrickmines", "1981: won by England",
+      "1980: won by Ireland, Carrickmines",
     ],
   },
 ];
 
 export const EXTERNAL_LINKS = [
-  { label: "The Croquet Association (England) — official rules", href: "https://www.croquet.org.uk/" },
-  { label: "Oxford Croquet — coaching notes and tactics", href: "http://www.oxfordcroquet.com/" },
+  { label: "The Croquet Association (England): official rules", href: "https://www.croquet.org.uk/" },
+  { label: "Oxford Croquet: coaching notes and tactics", href: "http://www.oxfordcroquet.com/" },
   { label: "World Croquet Federation", href: "https://worldcroquet.org/" },
   { label: "World Croquet Online Magazine", href: "https://www.croquetworld.com/" },
-  { label: "European Croquet Federation — European Masters", href: "https://johnswabey.wix.com/european-masters" },
+  { label: "European Croquet Federation: European Masters", href: "https://johnswabey.wix.com/european-masters" },
   { label: "Scottish Croquet Association", href: "https://www.scottishcroquet.org.uk/" },
-  { label: "CroquetScores — latest scores from Ireland and around the world", href: "https://www.croquetscores.com/" },
+  { label: "CroquetScores: latest scores from Ireland and around the world", href: "https://www.croquetscores.com/" },
   { label: "Carrickmines Croquet & Lawn Tennis Club", href: "https://www.carrickmines.com/" },
 ];

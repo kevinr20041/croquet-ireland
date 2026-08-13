@@ -10,7 +10,7 @@ export default function InternationalResultsPage() {
       <PageHero
         eyebrow="Competitions"
         title="International results"
-        description="Ireland's international team match history — Home Internationals, the Vera McWeeney and Appleton trophies, and more."
+        description="Ireland's international team match history, including the Home Internationals and the Vera McWeeney and Appleton trophies."
       />
       <Container className="py-14">
         <div className="grid gap-8 sm:grid-cols-2">

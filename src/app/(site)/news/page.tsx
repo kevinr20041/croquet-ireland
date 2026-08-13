@@ -33,7 +33,7 @@ export default async function NewsPage({ searchParams }: PageProps<"/news">) {
 
   return (
     <>
-      <PageHero eyebrow="News" title="Latest news" description="Match reports, championship results, and CAI announcements — browse by category or by year." />
+      <PageHero eyebrow="News" title="Latest news" description="Match reports, championship results, and CAI announcements. Browse by category or by year." />
       <Container className="py-10">
         <div className="flex flex-wrap gap-2 border-b border-line pb-4">
           {CATEGORIES.map((c) => (
@@ -83,7 +83,7 @@ export default async function NewsPage({ searchParams }: PageProps<"/news">) {
         </div>
         {articles.length === 0 && (
           <p className="py-10 text-ink-soft">
-            No articles match those filters yet — older seasons are still being added to the archive.
+            No articles match those filters yet. Older seasons are still being added to the archive.
           </p>
         )}
       </Container>

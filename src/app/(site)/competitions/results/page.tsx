@@ -13,7 +13,7 @@ export default async function ResultsPage() {
       <PageHero
         eyebrow="Competitions"
         title="Results archive"
-        description="Structured results from every CAI competition — searchable, not buried in old match reports."
+        description="Structured results from every CAI competition, searchable and not buried in old match reports."
       />
       <Container className="py-14">
         {results.length === 0 && <p className="text-ink-soft">No results posted yet.</p>}
@@ -39,9 +39,9 @@ export default async function ResultsPage() {
                     <tbody>
                       {result.placings.map((p, i) => (
                         <tr key={i} className="border-b border-line-soft">
-                          <td className="py-2 pr-4 font-medium text-ink">{p.title ?? "—"}</td>
-                          <td className="py-2 pr-4 text-ink-soft">{p.winner ?? "—"}</td>
-                          <td className="py-2 text-ink-soft">{p.runner_up ?? "—"}</td>
+                          <td className="py-2 pr-4 font-medium text-ink">{p.title ?? "N/A"}</td>
+                          <td className="py-2 pr-4 text-ink-soft">{p.winner ?? "N/A"}</td>
+                          <td className="py-2 text-ink-soft">{p.runner_up ?? "N/A"}</td>
                         </tr>
                       ))}
                     </tbody>

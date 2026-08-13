@@ -24,7 +24,7 @@ export default async function SearchPage({ searchParams }: PageProps<"/search">)
       <PageHero
         eyebrow="Search"
         title="Search the CAI website"
-        description="Rankings, handicaps, news, clubs, calendar, council, documents and more — all in one place."
+        description="Rankings, handicaps, news, clubs, calendar, council and documents, all in one place."
       />
       <Container className="py-10">
         <form action="/search" method="get" className="flex gap-2">

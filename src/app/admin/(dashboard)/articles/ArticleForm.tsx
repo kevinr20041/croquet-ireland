@@ -157,8 +157,8 @@ export function ArticleForm({ article }: { article?: Article }) {
           />
         </div>
         <p className="mt-2 text-xs text-ink-faint">
-          Facebook and Instagram accounts are not connected yet — once linked in Settings, publishing here will
-          post automatically. For now this caption is saved with the article so it&apos;s ready to copy across.
+          Facebook and Instagram accounts are not connected yet. Once linked in Settings, publishing here will
+          post automatically. For now this caption is saved with the article so it is ready to copy across.
         </p>
       </div>
 

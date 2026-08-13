@@ -55,7 +55,7 @@ export default async function CompetitionsPage() {
       <Container className="py-14">
         <SectionHeading eyebrow="Before you enter" title="Tournament conditions" />
         <p className="mb-4 max-w-2xl text-ink-soft">
-          The conditions every CAI tournament runs under — entry rules, hoop-setting, conduct and handicaps.
+          The conditions every CAI tournament runs under, covering entry rules, hoop-setting, conduct and handicaps.
         </p>
         <ButtonLink href="/competitions/tournament-conditions" variant="secondary">
           Read tournament conditions

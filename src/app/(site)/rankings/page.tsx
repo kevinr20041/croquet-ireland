@@ -19,7 +19,7 @@ export default async function RankingsPage() {
       <PageHero
         eyebrow="Rankings & Handicaps"
         title="Player standings"
-        description="Official Irish rankings drawn from the World Croquet Federation database, and CAI handicap lists — search for your own name."
+        description="Official Irish rankings drawn from the World Croquet Federation database, and CAI handicap lists. Search for your own name."
       />
       <Container className="py-10">
         <RankingsTabs acRankings={acRankings} gcRankings={gcRankings} acHandicaps={acHandicaps} gcHandicaps={gcHandicaps} />

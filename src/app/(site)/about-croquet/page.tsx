@@ -9,7 +9,7 @@ export default function AboutCroquetPage() {
       <PageHero
         eyebrow="About Croquet"
         title="What is croquet?"
-        description="A precise, tactical lawn game with two competitive forms played in Ireland today — and a much longer Irish history than most people realise."
+        description="A precise, tactical lawn game with two competitive forms played in Ireland today, and a much longer Irish history than most people realise."
       />
       <Container className="py-14">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
@@ -26,7 +26,7 @@ export default function AboutCroquetPage() {
               <h2 className="font-serif text-xl font-semibold text-ink">Golf Croquet</h2>
               <p className="mt-2 text-ink-soft">
                 The simplest and most social form. Players take single shots in strict turn order, all racing
-                to run the same hoop — everyone stays involved every round. Easy to learn in minutes, but
+                to run the same hoop, so everyone stays involved every round. Easy to learn in minutes, but
                 played seriously up to World Championship level.
               </p>
             </Card>

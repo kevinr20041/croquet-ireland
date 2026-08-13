@@ -15,8 +15,8 @@ export default async function AdminRankingsPage() {
     <div>
       <AdminPageHeader title="Rankings" />
       <p className="mb-6 max-w-2xl text-sm text-ink-soft">
-        Rankings are replaced in full each time you save — paste the latest export from the WCF rankings
-        database and save. This mirrors how the CAI already updates rankings today, just without needing to
+        Rankings are replaced in full each time you save. Paste the latest export from the WCF rankings
+        database and save. This mirrors how the CAI already updates rankings today, without needing to
         touch HTML.
       </p>
       <div className="grid gap-10 lg:grid-cols-2">

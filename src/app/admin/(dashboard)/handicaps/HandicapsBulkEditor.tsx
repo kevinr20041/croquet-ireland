@@ -41,7 +41,7 @@ export function HandicapsBulkEditor({ discipline, initialRows }: { discipline: "
       setMessage(`Saved ${preview.length} players.`);
       router.refresh();
     } else {
-      setMessage("Something went wrong — check the format and try again.");
+      setMessage("Something went wrong. Check the format and try again.");
     }
     setSaving(false);
   }

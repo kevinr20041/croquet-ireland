@@ -63,8 +63,8 @@ export default function HistoryPage() {
                 <FileText size={20} className="text-lawn-deep" /> How the Irish invented croquet
               </h2>
               <p className="mt-2 text-sm text-ink-soft">
-                An academic essay by historian Christine Kinealy on croquet&apos;s early Irish origins — evidence
-                that the game was played here up to two decades before it reached England.
+                An academic essay by historian Christine Kinealy on croquet&apos;s early Irish origins, with
+                evidence that the game was played here up to two decades before it reached England.
               </p>
               <ButtonLink
                 href="https://q41s7axx6lc9r6rm.public.blob.vercel-storage.com/documents/how-the-irish-invented-croquet-kinealy.pdf"

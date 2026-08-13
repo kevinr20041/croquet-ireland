@@ -25,7 +25,7 @@ export default function PlayPage() {
         <Card className="p-6">
           <h2 className="font-serif text-lg font-semibold text-ink">Visit a club</h2>
           <p className="mt-2 text-sm text-ink-soft">
-            Every CAI-affiliated club welcomes prospective members and visitors — most offer beginner
+            Every CAI-affiliated club welcomes prospective members and visitors. Most offer beginner
             coaching and are happy to lend equipment for a first go.
           </p>
           <ButtonLink href="/play/clubs" className="mt-4" variant="secondary">

@@ -50,9 +50,9 @@ export default async function HomePage() {
               Croquet in Ireland
             </h1>
             <p className="mt-4 max-w-lg text-lg text-ink-soft">
-              CAI is the governing body for the sport of croquet in Ireland — from relaxed garden play to
-              national and international championships. Whatever level you&apos;re at, there&apos;s a club
-              and a competition for you.
+              CAI is the governing body for the sport of croquet in Ireland, from relaxed garden play to
+              national and international championships. Whatever your level, there is a club and a
+              competition for you.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <ButtonLink href="/play/clubs">Find a Club</ButtonLink>
@@ -111,7 +111,7 @@ export default async function HomePage() {
             ))}
           </div>
         ) : (
-          <p className="text-ink-soft">No events scheduled yet — check back soon.</p>
+          <p className="text-ink-soft">No events scheduled yet. Check back soon.</p>
         )}
       </Container>
 
@@ -159,7 +159,7 @@ export default async function HomePage() {
             <SectionHeading
               eyebrow="New to the game?"
               title="About croquet"
-              description="Croquet has been played in Ireland since the 1830s — in fact, the game arrived in England from Ireland, not the other way around. Today it's played in two main forms: the fast, sociable Golf Croquet, and the tactical, longer-format Association Croquet."
+              description="Croquet has been played in Ireland since the 1830s. In fact, the game arrived in England from Ireland, not the other way around. Today it is played in two main forms: the fast, sociable Golf Croquet, and the tactical, longer-format Association Croquet."
             />
             <ButtonLink href="/about-croquet">Read more about the game</ButtonLink>
           </div>

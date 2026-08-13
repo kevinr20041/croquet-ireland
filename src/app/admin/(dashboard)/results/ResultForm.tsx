@@ -74,7 +74,7 @@ export function ResultForm({ result, clubs, events }: { result?: ResultRow; club
       <div className="grid grid-cols-2 gap-4">
         <Field label="Club">
           <Select value={clubId} onChange={(e) => setClubId(e.target.value)}>
-            <option value="">— None —</option>
+            <option value="">None</option>
             {clubs.map((c) => (
               <option key={c.id} value={c.id}>
                 {c.name}
@@ -84,7 +84,7 @@ export function ResultForm({ result, clubs, events }: { result?: ResultRow; club
         </Field>
         <Field label="Linked event">
           <Select value={eventId} onChange={(e) => setEventId(e.target.value)}>
-            <option value="">— None —</option>
+            <option value="">None</option>
             {events.map((ev) => (
               <option key={ev.id} value={ev.id}>
                 {ev.name}
@@ -125,7 +125,7 @@ export function ResultForm({ result, clubs, events }: { result?: ResultRow; club
         </button>
       </div>
 
-      <Field label="PDF result sheet URL" hint="Optional — link to a scanned/uploaded PDF">
+      <Field label="PDF result sheet URL" hint="Optional. Link to a scanned or uploaded PDF">
         <TextInput value={pdfUrl} onChange={(e) => setPdfUrl(e.target.value)} />
       </Field>
 

@@ -14,7 +14,7 @@ export default async function CalendarPage() {
       <PageHero
         eyebrow="Competitions"
         title="CAI Calendar"
-        description="Every tournament and fixture, upcoming and past — search by event name or date."
+        description="Every tournament and fixture, upcoming and past. Search by event name or date."
       />
       <Container className="py-14">
         <CalendarBrowser events={events} />

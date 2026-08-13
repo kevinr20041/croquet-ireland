@@ -81,13 +81,13 @@ export function RankingsTabs({ acRankings, gcRankings, acHandicaps, gcHandicaps 
                 <td className="px-4 py-2.5 font-medium text-ink">{row.player_name}</td>
                 {isRankings && "world_rank" in row && (
                   <>
-                    <td className="px-4 py-2.5 text-ink-soft">{row.world_rank ?? "—"}</td>
-                    <td className="px-4 py-2.5 text-ink-soft">{row.grade ?? "—"}</td>
-                    <td className="px-4 py-2.5 text-ink-soft">{row.games ?? "—"}</td>
-                    <td className="px-4 py-2.5 text-ink-soft">{row.win_pct != null ? `${row.win_pct}%` : "—"}</td>
+                    <td className="px-4 py-2.5 text-ink-soft">{row.world_rank ?? "N/A"}</td>
+                    <td className="px-4 py-2.5 text-ink-soft">{row.grade ?? "N/A"}</td>
+                    <td className="px-4 py-2.5 text-ink-soft">{row.games ?? "N/A"}</td>
+                    <td className="px-4 py-2.5 text-ink-soft">{row.win_pct != null ? `${row.win_pct}%` : "N/A"}</td>
                   </>
                 )}
-                {!isRankings && "handicap" in row && <td className="px-4 py-2.5 text-ink-soft">{row.handicap ?? "—"}</td>}
+                {!isRankings && "handicap" in row && <td className="px-4 py-2.5 text-ink-soft">{row.handicap ?? "N/A"}</td>}
               </tr>
             ))}
             {filtered.length === 0 && (

@@ -103,7 +103,7 @@ export function Footer() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://q41s7axx6lc9r6rm.public.blob.vercel-storage.com/brand/governance-code-logo.jpg"
-              alt="The Governance Code — A Journey to Success"
+              alt="The Governance Code: A Journey to Success"
               className="h-9 w-auto object-contain"
             />
           </div>

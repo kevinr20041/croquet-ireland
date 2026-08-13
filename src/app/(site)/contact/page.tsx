@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Contact" };
 export default function ContactPage() {
   return (
     <>
-      <PageHero eyebrow="Contact" title="Get in touch" description="For club-specific questions, contact the club directly — see the club directory." />
+      <PageHero eyebrow="Contact" title="Get in touch" description="For club-specific questions, contact the club directly. See the club directory." />
       <Container className="py-14">
         <div className="grid gap-4 sm:grid-cols-3">
           <Card className="p-5">
