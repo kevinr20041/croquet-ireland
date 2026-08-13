@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import { ArrowLeft, MapPin, Phone, Mail, ExternalLink } from "lucide-react";
-import { getClubBySlug } from "@/lib/queries";
-import { Container, Tag } from "@/components/site/ui";
+import { MapPin, Phone, Mail, ExternalLink, CalendarDays } from "lucide-react";
+import { getClubBySlug, getEventsByClub } from "@/lib/queries";
+import { Container, Tag, formatDateRange } from "@/components/site/ui";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 
 export const dynamic = "force-dynamic";
 
@@ -17,12 +17,11 @@ export default async function ClubProfilePage({ params }: PageProps<"/play/clubs
   const { slug } = await params;
   const club = await getClubBySlug(slug);
   if (!club) notFound();
+  const upcomingEvents = await getEventsByClub(club.id, 3);
 
   return (
     <Container className="py-10">
-      <Link href="/play/clubs" className="mb-6 flex items-center gap-1.5 text-sm font-semibold text-lawn-deep hover:underline">
-        <ArrowLeft size={16} /> Back to all clubs
-      </Link>
+      <Breadcrumbs items={[{ label: "Play Croquet", href: "/play" }, { label: "Find a Club", href: "/play/clubs" }, { label: club.name }]} />
 
       <div className="grid gap-10 lg:grid-cols-[1fr_320px]">
         <div>
@@ -46,6 +45,25 @@ export default async function ClubProfilePage({ params }: PageProps<"/play/clubs
             <div className="mt-6">
               <h2 className="text-sm font-bold uppercase tracking-wide text-ink-soft">Facilities</h2>
               <p className="mt-1 text-ink-soft">{club.lawns}</p>
+            </div>
+          )}
+          {upcomingEvents.length > 0 && (
+            <div className="mt-8">
+              <h2 className="text-sm font-bold uppercase tracking-wide text-ink-soft">Upcoming events at this club</h2>
+              <ul className="mt-3 space-y-2">
+                {upcomingEvents.map((event) => (
+                  <li key={event.id}>
+                    <a
+                      href={`/competitions/calendar/${event.slug}`}
+                      className="flex items-center gap-2 rounded-lg border border-line bg-paper-raised px-4 py-3 hover:border-lawn"
+                    >
+                      <CalendarDays size={16} className="shrink-0 text-lawn-deep" />
+                      <span className="flex-1 text-sm font-semibold text-ink">{event.name}</span>
+                      <span className="shrink-0 text-xs text-ink-faint">{formatDateRange(event.start_date, event.end_date)}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
         </div>

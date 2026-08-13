@@ -76,6 +76,17 @@ export async function getAllEvents() {
   return rows as unknown as EventRow[];
 }
 
+export async function getEventsByClub(clubId: string, limit = 3) {
+  const rows = await sql`
+    select e.*, c.name as club_name
+    from events e left join clubs c on c.id = e.club_id
+    where e.club_id = ${clubId} and e.start_date >= current_date - interval '1 day'
+    order by e.start_date asc
+    limit ${limit}
+  `;
+  return rows as unknown as EventRow[];
+}
+
 export async function getEventBySlug(slug: string) {
   const rows = await sql`
     select e.*, c.name as club_name

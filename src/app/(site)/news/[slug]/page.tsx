@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
 import { getArticleBySlug, getRelatedArticles } from "@/lib/queries";
 import { Container, formatDate, Tag } from "@/components/site/ui";
 import { ArticleCard } from "@/components/site/cards";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { ShareButton } from "@/components/site/ShareButton";
 
 export const dynamic = "force-dynamic";
 
@@ -22,15 +22,16 @@ export default async function ArticlePage({ params }: PageProps<"/news/[slug]">)
 
   return (
     <Container className="py-10">
-      <Link href="/news" className="mb-6 flex items-center gap-1.5 text-sm font-semibold text-lawn-deep hover:underline">
-        <ArrowLeft size={16} /> Back to news
-      </Link>
+      <Breadcrumbs items={[{ label: "News", href: "/news" }, { label: article.title }]} />
       <article className="max-w-2xl">
         <p className="text-xs font-bold uppercase tracking-wide text-maroon">{article.category.replace("-", " ")}</p>
         <h1 className="mt-1.5 text-3xl font-semibold text-ink">{article.title}</h1>
-        <p className="mt-2 text-sm text-ink-faint">
-          {formatDate(article.published_at)} {article.author && `· ${article.author}`}
-        </p>
+        <div className="mt-2 flex flex-wrap items-center justify-between gap-3">
+          <p className="text-sm text-ink-faint">
+            {formatDate(article.published_at)} {article.author && `· ${article.author}`}
+          </p>
+          <ShareButton title={article.title} />
+        </div>
         {article.featured_image_url && (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={article.featured_image_url} alt="" className="mt-6 w-full rounded-xl border border-line object-cover" />

@@ -2,9 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Images, FileText } from "lucide-react";
 import { Container, PageHero, Prose, Card, ButtonLink } from "@/components/site/ui";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { HISTORY_TEXT, GAZETTE_SUMMARY, CARRICKMINES_100_SUMMARY } from "@/lib/content";
 
 export const metadata: Metadata = { title: "History" };
+
+const JUMP_LINKS = [
+  { href: "#croquet-in-ireland", label: "Croquet in Ireland" },
+  { href: "#croquet-gazette", label: "The Croquet Gazette" },
+  { href: "#carrickmines-100-years", label: "Carrickmines: 100 years" },
+  { href: "#how-the-irish-invented-croquet", label: "How the Irish invented croquet" },
+  { href: "#1900-gallery", label: "1900 gallery" },
+];
 
 export default function HistoryPage() {
   const historyParagraphs = HISTORY_TEXT.split("\n\n");
@@ -19,7 +28,25 @@ export default function HistoryPage() {
         description="Croquet in Ireland, from its 1830s origins to a century of championships at Carrickmines."
       />
 
-      <Container className="py-14">
+      <div className="border-b border-line bg-paper-raised">
+        <Container className="flex flex-wrap gap-2 py-4">
+          {JUMP_LINKS.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="rounded-full border border-line px-3.5 py-1.5 text-sm font-semibold text-ink-soft hover:border-lawn hover:text-lawn-deep"
+            >
+              {link.label}
+            </a>
+          ))}
+        </Container>
+      </div>
+
+      <Container className="pt-10">
+        <Breadcrumbs items={[{ label: "About Croquet", href: "/about-croquet" }, { label: "History" }]} />
+      </Container>
+
+      <Container className="py-4">
         <span id="croquet-in-ireland" className="block scroll-mt-24" />
         <h2 className="text-2xl font-semibold text-ink">Croquet in Ireland</h2>
         <p className="mb-6 text-sm text-ink-faint">By Clive Martin &amp; Simon Williams (2004)</p>

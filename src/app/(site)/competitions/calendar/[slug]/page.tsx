@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import { ArrowLeft, CalendarDays, Clock, MapPin, FileText, ExternalLink } from "lucide-react";
+import { CalendarDays, Clock, MapPin, FileText, ExternalLink } from "lucide-react";
 import { getEventBySlug } from "@/lib/queries";
 import { Container, formatDateRange } from "@/components/site/ui";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { AddToCalendarButton } from "@/components/site/AddToCalendarButton";
 
 export const dynamic = "force-dynamic";
 
@@ -20,9 +21,13 @@ export default async function EventDetailPage({ params }: PageProps<"/competitio
 
   return (
     <Container className="py-10">
-      <Link href="/competitions/calendar" className="mb-6 flex items-center gap-1.5 text-sm font-semibold text-lawn-deep hover:underline">
-        <ArrowLeft size={16} /> Back to calendar
-      </Link>
+      <Breadcrumbs
+        items={[
+          { label: "Competitions", href: "/competitions" },
+          { label: "Calendar", href: "/competitions/calendar" },
+          { label: event.name },
+        ]}
+      />
       <p className="flex items-center gap-1.5 text-sm font-semibold text-lawn-deep">
         <CalendarDays size={16} /> {formatDateRange(event.start_date, event.end_date)}
       </p>
@@ -54,6 +59,13 @@ export default async function EventDetailPage({ params }: PageProps<"/competitio
           )}
         </div>
         <aside className="h-fit space-y-3 rounded-xl border border-line bg-paper-tint p-6">
+          <AddToCalendarButton
+            name={event.name}
+            startDate={event.start_date}
+            endDate={event.end_date}
+            location={event.venue ?? event.club_name ?? ""}
+            details={event.description ?? ""}
+          />
           {event.registration_link && (
             <a
               href={event.registration_link}
