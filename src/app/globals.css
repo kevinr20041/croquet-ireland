@@ -121,3 +121,49 @@ a {
 table {
   font-variant-numeric: tabular-nums;
 }
+
+@media print {
+  :root,
+  :root[data-theme="dark"] {
+    --paper: #ffffff;
+    --paper-raised: #ffffff;
+    --paper-tint: #ffffff;
+    --ink: #000000;
+    --ink-soft: #333333;
+    --ink-faint: #555555;
+    --line: #999999;
+    --line-soft: #cccccc;
+  }
+
+  body {
+    font-size: 12pt;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: underline;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    font-weight: normal;
+    color: #555555;
+  }
+
+  .shadow-sm,
+  .shadow-lg {
+    box-shadow: none !important;
+  }
+
+  main {
+    max-width: none !important;
+  }
+
+  section,
+  article,
+  table,
+  li {
+    break-inside: avoid;
+  }
+}

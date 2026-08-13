@@ -10,7 +10,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-paper/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-line bg-paper/95 backdrop-blur print:hidden">
       <div className="border-b border-line-soft bg-paper-tint">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-1.5 text-sm">
           <p className="text-ink-soft">Governing body for croquet in Ireland</p>

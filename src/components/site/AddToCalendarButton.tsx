@@ -50,15 +50,21 @@ export function AddToCalendarButton({
   endDate,
   location,
   details,
+  variant = "light",
 }: {
   name: string;
   startDate: string;
   endDate?: string | null;
   location: string;
   details: string;
+  variant?: "light" | "dark";
 }) {
   const [open, setOpen] = useState(false);
   const end = endDate ?? startDate;
+  const buttonStyles =
+    variant === "dark"
+      ? "border-gold text-gold hover:bg-lawn-deep/60"
+      : "border-lawn text-lawn-deep hover:bg-paper-raised";
 
   function downloadIcs() {
     const ics = buildIcsFile(name, startDate, end, location, details);
@@ -75,12 +81,12 @@ export function AddToCalendarButton({
   }
 
   return (
-    <div className="relative">
+    <div className="relative print:hidden">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex w-full items-center justify-center gap-2 rounded-lg border border-lawn px-4 py-2.5 text-sm font-semibold text-lawn-deep hover:bg-paper-raised"
+        className={`flex w-full items-center justify-center gap-2 rounded-lg border px-4 py-2.5 text-sm font-semibold ${buttonStyles}`}
       >
         <CalendarPlus size={16} /> Add to calendar <ChevronDown size={14} />
       </button>

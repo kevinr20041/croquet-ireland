@@ -1,8 +1,25 @@
 import Link from "next/link";
-import { CalendarDays, MapPinned, GraduationCap, Trophy, BookOpenText, ListOrdered, UserPlus } from "lucide-react";
+import {
+  CalendarDays,
+  MapPinned,
+  GraduationCap,
+  Trophy,
+  BookOpenText,
+  ListOrdered,
+  UserPlus,
+  Brain,
+  Trees,
+  Users,
+  Flag,
+  Compass,
+  HeartHandshake,
+  CalendarPlus,
+  Globe,
+} from "lucide-react";
 import { getAllAlbums, getLatestResults, getPublishedArticles, getUpcomingEvents } from "@/lib/queries";
 import { Container, SectionHeading, ButtonLink, formatDate } from "@/components/site/ui";
 import { ArticleCard, EventCard, ResultCard } from "@/components/site/cards";
+import { NextEventBanner } from "@/components/site/NextEventBanner";
 
 export const dynamic = "force-dynamic";
 
@@ -14,6 +31,44 @@ const QUICK_LINKS = [
   { label: "Rankings", href: "/rankings", icon: ListOrdered },
   { label: "Membership", href: "/about/membership", icon: UserPlus },
   { label: "Rules", href: "/rules", icon: BookOpenText },
+];
+
+const WHY_PLAY = [
+  { title: "Strategy", description: "Every shot is a decision. Croquet rewards tactics as much as skill with a mallet.", icon: Brain },
+  { title: "Outdoors", description: "Play on some of the finest lawns in Ireland, in clubs old and new.", icon: Trees },
+  { title: "Social", description: "Meet people through clubs, leagues and competitions around the country.", icon: Users },
+  { title: "Competitive", description: "From your first game to representing Ireland at international level.", icon: Trophy },
+];
+
+const GET_INVOLVED = [
+  {
+    title: "I'm new to croquet",
+    description: "No equipment or experience needed. Find your nearest club and go along.",
+    href: "/play/clubs",
+    cta: "Find a club",
+    icon: Compass,
+  },
+  {
+    title: "I want to join a club",
+    description: "See CAI membership benefits and how to apply.",
+    href: "/about/membership",
+    cta: "Membership",
+    icon: HeartHandshake,
+  },
+  {
+    title: "I'm already a player",
+    description: "Check the calendar, rankings and results.",
+    href: "/competitions/calendar",
+    cta: "Competitions",
+    icon: CalendarPlus,
+  },
+  {
+    title: "I want to play for Ireland",
+    description: "See how rankings feed into international selection.",
+    href: "/rankings",
+    cta: "Rankings",
+    icon: Globe,
+  },
 ];
 
 const QUICK_LINK_COLORS = [
@@ -34,46 +89,45 @@ export default async function HomePage() {
     getAllAlbums(),
   ]);
   const latestAlbums = albums.slice(0, 4);
+  const nextEvent = events[0];
 
   return (
     <>
-      <section className="relative overflow-hidden border-b border-line bg-gradient-to-br from-lawn-light/25 via-paper-tint to-sky/10">
-        <div className="pointer-events-none absolute -right-16 -top-24 h-72 w-72 rounded-full bg-lawn/15 blur-3xl" aria-hidden="true" />
-        <div className="pointer-events-none absolute -left-20 bottom-0 h-56 w-56 rounded-full bg-gold/15 blur-3xl" aria-hidden="true" />
-        <Container className="relative grid gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-20">
-          <div>
-            <p className="mb-3 flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-maroon">
+      {nextEvent && <NextEventBanner event={nextEvent} />}
+      <section className="relative overflow-hidden border-b border-line">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://q41s7axx6lc9r6rm.public.blob.vercel-storage.com/hero/learning-to-play.jpg"
+          alt="Players in whites during a croquet match on an Irish club lawn"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(115deg, rgba(6,40,31,0.92) 0%, rgba(6,40,31,0.78) 32%, rgba(6,40,31,0.35) 62%, rgba(6,40,31,0.15) 100%)" }}
+          aria-hidden="true"
+        />
+        <Container className="relative py-20 lg:py-28">
+          <div className="max-w-xl">
+            <p className="mb-3 flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-gold">
               <span className="inline-block h-1 w-6 rounded-full bg-gold" />
               Established players since the 1830s
             </p>
-            <h1 className="max-w-xl text-4xl font-semibold leading-tight text-ink sm:text-5xl">
+            <h1 className="text-4xl font-semibold leading-tight text-white sm:text-6xl">
               Croquet in Ireland
             </h1>
-            <p className="mt-4 max-w-lg text-lg text-ink-soft">
+            <p className="mt-3 text-xl font-medium text-white/90 sm:text-2xl">
+              An old game. A modern sport.
+            </p>
+            <p className="mt-5 max-w-lg text-lg text-white/80">
               CAI is the governing body for the sport of croquet in Ireland, from relaxed garden play to
               national and international championships. Whatever your level, there is a club and a
               competition for you.
             </p>
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-3">
               <ButtonLink href="/play/clubs">Find a Club</ButtonLink>
-              <ButtonLink href="/about-croquet/getting-started" variant="secondary">
-                Learn to Play
+              <ButtonLink href="/about-croquet/getting-started" variant="secondary" className="!border-white !text-white hover:!bg-white/10">
+                Try Croquet
               </ButtonLink>
-            </div>
-          </div>
-          <div className="overflow-hidden rounded-2xl border border-line bg-paper-raised shadow-sm">
-            <div className="flex aspect-[4/3] items-center justify-center bg-gradient-to-b from-lawn/15 to-lawn/5">
-              <svg viewBox="0 0 200 150" className="h-4/5 w-4/5" fill="none">
-                <rect x="10" y="10" width="180" height="130" rx="4" stroke="var(--lawn)" strokeOpacity="0.3" strokeWidth="2" />
-                <path d="M46 122 L46 96 a9 9 0 0 1 18 0 L64 122" stroke="var(--lawn-deep)" strokeWidth="4" strokeLinecap="round" />
-                <path d="M108 122 L108 96 a9 9 0 0 1 18 0 L126 122" stroke="var(--lawn-deep)" strokeWidth="4" strokeLinecap="round" />
-                <path d="M158 122 L158 96 a9 9 0 0 1 18 0 L176 122" stroke="var(--lawn-deep)" strokeOpacity="0.5" strokeWidth="4" strokeLinecap="round" />
-                <line x1="55" y1="120" x2="26" y2="142" stroke="var(--ink-faint)" strokeWidth="3" strokeLinecap="round" />
-                <circle cx="55" cy="118" r="7" fill="var(--maroon)" />
-                <circle cx="86" cy="130" r="7" fill="var(--gold)" />
-                <circle cx="117" cy="118" r="7" fill="var(--sky)" />
-                <circle cx="148" cy="132" r="7" fill="var(--ink)" />
-              </svg>
             </div>
           </div>
         </Container>
@@ -93,6 +147,57 @@ export default async function HomePage() {
                 {label}
               </Link>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      <Container className="py-14">
+        <SectionHeading eyebrow="New to the game?" title="Why play croquet?" />
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {WHY_PLAY.map(({ title, description, icon: Icon }) => (
+            <div key={title} className="rounded-xl border border-line bg-paper-raised p-5">
+              <Icon size={26} className="text-lawn-deep" />
+              <h3 className="mt-3 font-semibold text-ink">{title}</h3>
+              <p className="mt-1 text-sm text-ink-soft">{description}</p>
+            </div>
+          ))}
+        </div>
+      </Container>
+
+      <section className="border-y border-line bg-paper-tint">
+        <Container className="py-14">
+          <SectionHeading
+            eyebrow="Two forms, one sport"
+            title="Golf Croquet or Association Croquet?"
+            description="Not sure where to start? Here is the difference between the two games played in Ireland."
+          />
+          <div className="grid gap-5 sm:grid-cols-2">
+            <div className="rounded-2xl border-2 border-lawn bg-paper-raised p-6">
+              <p className="inline-flex items-center gap-2 rounded-full bg-lawn/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-lawn-deep">
+                <Flag size={14} /> Golf Croquet
+              </p>
+              <p className="mt-3 text-lg font-semibold text-ink">Fast &middot; Social &middot; Easy to get started</p>
+              <p className="mt-2 text-ink-soft">
+                Short games decided hoop by hoop, where every player is involved in every turn. The most
+                popular form for beginners and the format played at most Irish clubs&rsquo; open days.
+              </p>
+            </div>
+            <div className="rounded-2xl border-2 border-sky bg-paper-raised p-6">
+              <p className="inline-flex items-center gap-2 rounded-full bg-sky/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-sky">
+                <Compass size={14} /> Association Croquet
+              </p>
+              <p className="mt-3 text-lg font-semibold text-ink">Tactical &middot; Strategic &middot; Longer games</p>
+              <p className="mt-2 text-ink-soft">
+                The traditional, longer-format game, prized for its depth of strategy. Widely considered
+                one of the most tactically demanding lawn sports, and the format of the Irish
+                Championships.
+              </p>
+            </div>
+          </div>
+          <div className="mt-6">
+            <ButtonLink href="/about-croquet" variant="ghost">
+              Which one is for me? Read more about the game
+            </ButtonLink>
           </div>
         </Container>
       </section>
@@ -154,29 +259,23 @@ export default async function HomePage() {
       </Container>
 
       <section className="border-y border-line bg-paper-tint">
-        <Container className="grid gap-10 py-14 lg:grid-cols-2 lg:items-center">
-          <div>
-            <SectionHeading
-              eyebrow="New to the game?"
-              title="About croquet"
-              description="Croquet has been played in Ireland since the 1830s. In fact, the game arrived in England from Ireland, not the other way around. Today it is played in two main forms: the fast, sociable Golf Croquet, and the tactical, longer-format Association Croquet."
-            />
-            <ButtonLink href="/about-croquet">Read more about the game</ButtonLink>
-          </div>
-          <div className="rounded-2xl border border-line bg-paper-raised p-6">
-            <h3 className="font-serif text-xl font-semibold text-ink">Try it for free</h3>
-            <p className="mt-2 text-ink-soft">
-              The CAI has croquet sets available for free loan, and every affiliated club welcomes new and
-              visiting players.
-            </p>
-            <div className="mt-5 flex flex-wrap gap-3">
-              <ButtonLink href="/play" variant="secondary">
-                Getting started
-              </ButtonLink>
-              <ButtonLink href="/play/clubs" variant="ghost">
-                Find a club near you
-              </ButtonLink>
-            </div>
+        <Container className="py-14">
+          <SectionHeading
+            eyebrow="Get involved"
+            title="Where do you fit in?"
+            description="The CAI has croquet sets available for free loan, and every affiliated club welcomes new and visiting players. Whatever stage you're at, here's where to go next."
+          />
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {GET_INVOLVED.map(({ title, description, href, cta, icon: Icon }) => (
+              <div key={title} className="flex flex-col rounded-xl border border-line bg-paper-raised p-5">
+                <Icon size={24} className="text-lawn-deep" />
+                <h3 className="mt-3 font-semibold text-ink">{title}</h3>
+                <p className="mt-1 flex-1 text-sm text-ink-soft">{description}</p>
+                <Link href={href} className="mt-4 text-sm font-semibold text-lawn-deep hover:underline">
+                  {cta} &rarr;
+                </Link>
+              </div>
+            ))}
           </div>
         </Container>
       </section>

@@ -100,7 +100,7 @@ export function SearchAutocomplete({ initialQuery = "" }: { initialQuery?: strin
   let runningIndex = -1;
 
   return (
-    <form onSubmit={handleSubmit} className="relative">
+    <form onSubmit={handleSubmit} className="relative print:hidden">
       <div className="relative">
         <Search size={20} className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-ink-faint" />
         <input

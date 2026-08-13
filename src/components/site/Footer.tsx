@@ -3,7 +3,7 @@ import { MAIN_NAV } from "@/lib/nav";
 
 export function Footer() {
   return (
-    <footer className="mt-16 border-t border-line bg-paper-tint">
+    <footer className="mt-16 border-t border-line bg-paper-tint print:hidden">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <p className="font-serif text-lg font-semibold text-ink">Croquet Association of Ireland</p>

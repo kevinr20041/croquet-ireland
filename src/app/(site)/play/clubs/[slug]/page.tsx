@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { MapPin, Phone, Mail, ExternalLink, CalendarDays } from "lucide-react";
+import { MapPin, Phone, Mail, ExternalLink, CalendarDays, Navigation } from "lucide-react";
 import { getClubBySlug, getEventsByClub } from "@/lib/queries";
 import { Container, Tag, formatDateRange } from "@/components/site/ui";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
@@ -74,6 +74,18 @@ export default async function ClubProfilePage({ params }: PageProps<"/play/clubs
             {club.address && (
               <li className="flex items-start gap-2 text-ink-soft">
                 <MapPin size={16} className="mt-0.5 shrink-0" /> {club.address}
+              </li>
+            )}
+            {club.address && (
+              <li>
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${club.name}, ${club.address}`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 font-semibold text-lawn-deep hover:underline"
+                >
+                  <Navigation size={16} /> Get directions
+                </a>
               </li>
             )}
             {club.contact_person && <li className="text-ink-soft">Contact: {club.contact_person}</li>}

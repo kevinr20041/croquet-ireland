@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CalendarDays, Clock, MapPin, ArrowRight } from "lucide-react";
+import { CalendarDays, Clock, MapPin, ArrowRight, Trophy } from "lucide-react";
 import type { Article, EventRow, ResultRow } from "@/lib/types";
 import { Card, Tag, formatDate, formatDateRange } from "./ui";
 
@@ -76,15 +76,21 @@ export function ArticleCard({ article }: { article: Article }) {
 
 export function ResultCard({ result }: { result: ResultRow }) {
   return (
-    <Card className="p-5">
-      <p className="text-xs font-semibold uppercase tracking-wide text-ink-faint">
-        {formatDate(result.result_date)} {result.club_name ? `· ${result.club_name}` : ""}
-      </p>
-      <h3 className="mt-1 text-base font-semibold text-ink">{result.competition}</h3>
-      {result.placings?.[0] && (
-        <p className="mt-2 text-sm text-ink-soft">
-          Winner: <span className="font-semibold text-ink">{result.placings[0].winner}</span>
+    <Card className="overflow-hidden p-0">
+      <div className="border-b border-line bg-paper-tint px-5 py-3">
+        <h3 className="text-base font-semibold text-ink">{result.competition}</h3>
+        <p className="mt-0.5 text-xs font-semibold uppercase tracking-wide text-ink-faint">
+          {formatDate(result.result_date)} {result.club_name ? `· ${result.club_name}` : ""}
         </p>
+      </div>
+      {result.placings?.[0] && (
+        <div className="flex items-center gap-3 px-5 py-4">
+          <Trophy size={22} className="shrink-0 text-gold" />
+          <div>
+            <p className="text-xs font-bold uppercase tracking-wide text-ink-faint">Champion</p>
+            <p className="font-semibold text-ink">{result.placings[0].winner}</p>
+          </div>
+        </div>
       )}
     </Card>
   );

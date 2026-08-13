@@ -83,7 +83,7 @@ export function CalendarBrowser({ events }: { events: EventRow[] }) {
 
   return (
     <div>
-      <div className="relative max-w-xl">
+      <div className="relative max-w-xl print:hidden">
         <label htmlFor="event-search" className="sr-only">
           Search events by name or date
         </label>
