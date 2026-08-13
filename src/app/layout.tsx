@@ -14,14 +14,29 @@ const inter = Inter({
   weight: ["400", "500", "600", "700"],
 });
 
+const SITE_TITLE = "Croquet Association of Ireland";
+const SITE_DESCRIPTION =
+  "The governing body for the sport of croquet in Ireland: clubs, competitions, results, rankings and how to start playing.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://croquet-ireland.vercel.app"),
   title: {
-    default: "Croquet Association of Ireland",
+    default: SITE_TITLE,
     template: "%s | Croquet Association of Ireland",
   },
-  description:
-    "The governing body for the sport of croquet in Ireland: clubs, competitions, results, rankings and how to start playing.",
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    siteName: SITE_TITLE,
+    locale: "en_IE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
